@@ -59,8 +59,9 @@ body {
 
 .logo {
     display: flex;
-    align-items: center;
-    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
 }
 
 .logo img {
@@ -72,6 +73,13 @@ body {
     font-size: 20px;
     font-weight: 600;
     color: var(--color-blue);
+}
+
+.logo-subtitle {
+    font-size: 11px;
+    color: #666;
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
 .nav-menu {
@@ -561,49 +569,92 @@ body {
     background: var(--color-white);
 }
 
+/* v2 版本智医@共建样式 */
 .ecosystem-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 32px;
 }
 
 .ecosystem-card {
-    padding: 48px 40px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    border: 1px solid #e8e8e8;
-    border-radius: 16px;
+    background: var(--color-white);
+    border: 1px solid rgba(53, 173, 243, 0.2);
+    border-radius: 12px;
+    padding: 32px 24px;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ecosystem-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-blue), var(--color-cyan));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .ecosystem-card:hover {
-    border-color: var(--color-blue);
-    box-shadow: 0 12px 40px rgba(53, 173, 243, 0.12);
-    transform: translateY(-8px);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(53, 173, 243, 0.15);
+}
+
+.ecosystem-card:hover::before {
+    transform: scaleX(1);
+}
+
+.ecosystem-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(53, 173, 243, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .ecosystem-card h3 {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
     color: var(--color-black);
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .ecosystem-card p {
-    font-size: 15px;
+    font-size: 14px;
     color: #666;
-    margin-bottom: 24px;
     line-height: 1.7;
+    margin-bottom: 20px;
 }
 
-.ecosystem-benefits {
-    list-style: none;
-    margin-bottom: 32px;
+.ecosystem-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-blue);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.ecosystem-benefits li {
-    font-size: 15px;
-    color: #666;
-    margin-bottom: 12px;
+.ecosystem-link:hover {
+    gap: 10px;
+    color: var(--color-cyan);
+}
+
+.ecosystem-link svg {
+    transition: transform 0.3s ease;
+}
+
+.ecosystem-link:hover svg {
+    transform: translateX(4px);
+}
     padding-left: 20px;
     position: relative;
 }
