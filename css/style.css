@@ -696,49 +696,127 @@ body {
 }
 
 /* ========================================
-   底部模块
+   底部模块（V2 版本样式）
    ======================================== */
 .footer {
-    background: var(--color-white);
+    background: #f8f9fa;
+    padding: 60px 0 30px;
 }
 
-.trust-section {
-    padding: 60px 0;
+.footer-bottom {
     background: #f8f9fa;
+}
+
+.footer-grid-v2 {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 60px;
+    padding-bottom: 40px;
     border-bottom: 1px solid #e8e8e8;
 }
 
-.trust-title {
-    text-align: center;
-    font-size: 16px;
-    color: #999;
-    margin-bottom: 40px;
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-.trust-logos {
+.footer-logo {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo .logo-icon {
+    height: 40px;
+    width: auto;
+}
+
+.footer-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo-text span {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+.footer-logo-text small {
+    font-size: 13px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-contact > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer-contact strong {
+    font-size: 13px;
+    color: #999;
+    font-weight: 500;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    color: var(--color-black);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
 }
 
-.trust-logo {
-    font-size: 16px;
+.footer-col h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-black);
+    margin-bottom: 20px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col li {
+    margin-bottom: 12px;
+}
+
+.footer-col a {
     color: #666;
-    padding: 12px 24px;
-    background: var(--color-white);
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
 }
 
-.contact-section {
-    padding: 80px 0;
+.footer-col a:hover {
+    color: var(--color-blue);
 }
 
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+.footer-copyright {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-copyright p {
+    font-size: 13px;
+    color: #999;
+    margin: 4px 0;
 }
 
 .contact-form-wrapper h3,
