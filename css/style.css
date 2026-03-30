@@ -776,8 +776,8 @@ body {
 
 .footer-links {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 32px;
 }
 
 .footer-col h4 {
