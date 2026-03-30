@@ -829,12 +829,8 @@ body {
 }
 
 .footer-logo .logo-icon {
-    height: 36px;
+    height: 40px;
     width: auto;
-    background: #fff;
-    padding: 6px;
-    border-radius: 6px;
-    margin-bottom: 16px;
 }
 
 .footer-logo-text {
@@ -843,35 +839,38 @@ body {
 }
 
 .footer-logo-text span {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     color: #fff;
 }
 
 .footer-logo-text small {
-    font-size: 12px;
-    color: #999;
-    margin-top: 4px;
+    font-size: 13px;
+    color: #ccc;
+    margin-top: 2px;
 }
 
 .footer-contact {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.footer-contact > div strong {
-    display: block;
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.footer-contact > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.footer-contact > div p {
+.footer-contact strong {
     font-size: 13px;
-    color: #999;
+    color: #ccc;
+    font-weight: 500;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    color: #fff;
     line-height: 1.6;
     margin: 0;
 }
