@@ -202,6 +202,83 @@ body {
     line-height: 1.6;
 }
 
+/* 行业洞察竖条 */
+.insights-vertical {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 32px;
+}
+
+.insights-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.insights-list {
+    list-style: none;
+}
+
+.insight-item {
+    margin-bottom: 16px;
+}
+
+.insight-item:last-child {
+    margin-bottom: 0;
+}
+
+.insight-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-blue);
+    margin-bottom: 6px;
+}
+
+.insight-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.insight-link:hover {
+    background: rgba(53, 173, 243, 0.15);
+    color: var(--color-blue);
+}
+
+.insight-text {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.insight-link svg {
+    flex-shrink: 0;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.insight-link:hover svg {
+    opacity: 1;
+    transform: translateX(4px);
+}
+
 .hero-cta {
     display: flex;
     gap: 12px;
@@ -260,94 +337,7 @@ body {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
-/* 行业洞察预览 */
-.insights-preview {
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #0a1a2e 0%, #1a3a5c 100%);
-    position: relative;
-    z-index: 2;
-    margin-top: -20px;
-    border-radius: 20px 20px 0 0;
-}
 
-.insights-container {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 60px;
-    align-items: start;
-}
-
-.insights-intro {
-    padding-top: 20px;
-}
-
-.insights-intro h2 {
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--color-white);
-    margin-bottom: 8px;
-}
-
-.insights-intro p {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.insights-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px 48px;
-}
-
-.insight-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    cursor: pointer;
-    padding: 8px 0;
-    transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 16px;
-}
-
-.insight-card:hover {
-    border-bottom-color: var(--color-blue);
-}
-
-.insight-card:hover .insight-title {
-    color: var(--color-blue);
-}
-
-.insight-category {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--color-blue);
-    white-space: nowrap;
-    min-width: 60px;
-}
-
-.insight-content {
-    flex: 1;
-}
-
-.insight-title {
-    font-size: 15px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
-    transition: color 0.3s ease;
-}
-
-.insight-arrow {
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.insight-card:hover .insight-arrow {
-    color: var(--color-blue);
-    transform: translateX(4px);
-}
 
 /* 悬浮联系按钮 */
 .float-contact-btn {
@@ -1150,7 +1140,6 @@ body {
         order: -1;
     }
     
-    .insights-grid,
     .solutions-grid {
         grid-template-columns: repeat(2, 1fr);
     }
