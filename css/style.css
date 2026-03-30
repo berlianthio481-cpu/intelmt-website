@@ -699,100 +699,102 @@ body {
    底部联系转化区（V2 版本）
    ======================================== */
 .footer-cta {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    padding: 80px 0;
-    border-top: 1px solid #e8e8e8;
+    background: #F8FAFC;
+    padding: 64px 0;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.3);
+    border-top: 1px solid rgba(204, 204, 204, 0.2);
 }
 
 .cta-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 .cta-text h2 {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 300;
     color: var(--color-black);
     margin-bottom: 16px;
-    line-height: 1.4;
+    letter-spacing: -0.5px;
 }
 
 .cta-text h2 span {
+    font-weight: 700;
     color: var(--color-blue);
 }
 
 .cta-text p {
-    font-size: 16px;
+    font-size: 15px;
     color: #666;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 .cta-actions {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 32px;
 }
 
 .qr-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+    background: var(--color-white);
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(204, 204, 204, 0.2);
+    text-align: center;
 }
 
-.qr-box .qr-image {
-    width: 180px;
-    height: 180px;
-    object-fit: contain;
-    border: 1px solid #e8e8e8;
+.qr-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin: 0 auto 8px;
+    display: block;
     border-radius: 8px;
-    padding: 8px;
-    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .qr-box span {
-    font-size: 14px;
-    color: #666;
+    font-size: 10px;
+    color: var(--color-blue);
+    font-weight: 700;
 }
 
-.cta-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.cta-label {
+.cta-contact .cta-label {
     font-size: 15px;
     color: var(--color-blue);
-    font-weight: 500;
+    font-weight: 700;
+    margin-bottom: 4px;
 }
 
-.cta-phone {
-    font-size: 16px;
-    color: #666;
+.cta-contact .cta-phone {
+    font-size: 14px;
+    color: var(--color-black);
+    margin-bottom: 16px;
 }
 
 .cta-phone .phone-number {
     font-size: 20px;
     font-weight: 700;
-    color: var(--color-black);
 }
 
 .btn-large {
     padding: 14px 40px;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 8px 20px rgba(53, 173, 243, 0.3);
 }
 
 /* ========================================
    底部导航栏（深灰色）
    ======================================== */
 .footer-bottom {
-    background: #2a2a2a;
-    padding: 60px 0 30px;
-    color: #ccc;
+    background: #0A1929;
+    color: #999;
+    padding: 64px 0 32px;
+    position: relative;
+    overflow: hidden;
 }
 
 .footer-grid-v2 {
@@ -817,11 +819,12 @@ body {
 }
 
 .footer-logo .logo-icon {
-    height: 40px;
+    height: 36px;
     width: auto;
     background: #fff;
-    padding: 4px;
-    border-radius: 4px;
+    padding: 6px;
+    border-radius: 6px;
+    margin-bottom: 16px;
 }
 
 .footer-logo-text {
@@ -830,38 +833,35 @@ body {
 }
 
 .footer-logo-text span {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: #fff;
 }
 
 .footer-logo-text small {
-    font-size: 13px;
+    font-size: 12px;
     color: #999;
-    margin-top: 2px;
+    margin-top: 4px;
 }
 
 .footer-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 
-.footer-contact > div {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+.footer-contact > div strong {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.footer-contact strong {
+.footer-contact > div p {
     font-size: 13px;
     color: #999;
-    font-weight: 500;
-}
-
-.footer-contact p {
-    font-size: 14px;
-    color: #ccc;
     line-height: 1.6;
     margin: 0;
 }
@@ -869,14 +869,16 @@ body {
 .footer-links {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 32px;
+    gap: 40px;
 }
 
 .footer-col h4 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .footer-col ul {
@@ -886,13 +888,13 @@ body {
 }
 
 .footer-col li {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .footer-col a {
-    color: #ccc;
+    color: #999;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     transition: color 0.3s ease;
 }
 
