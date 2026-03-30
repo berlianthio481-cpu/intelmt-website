@@ -38,22 +38,32 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     // 客户案例标签切换
     // ========================================
-    const caseTabs = document.querySelectorAll('.case-tab');
+    const categoryTabs = document.querySelectorAll('.category-tab');
     const caseItems = document.querySelectorAll('.case-item');
     
-    caseTabs.forEach(tab => {
+    categoryTabs.forEach(tab => {
         tab.addEventListener('click', function() {
             const category = this.getAttribute('data-category');
             
             // 切换标签激活状态
-            caseTabs.forEach(t => t.classList.remove('active'));
+            categoryTabs.forEach(t => t.classList.remove('active'));
             this.classList.add('active');
             
             // 切换案例内容
             caseItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.getAttribute('data-category') === category) {
-                    item.classList.add('active');
+                const itemCategory = item.getAttribute('data-category');
+                
+                if (itemCategory === category) {
+                    item.style.display = 'grid';
+                    // 添加淡入动画
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 50);
+                } else {
+                    item.style.display = 'none';
                 }
             });
         });
