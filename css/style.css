@@ -696,15 +696,103 @@ body {
 }
 
 /* ========================================
-   底部模块（V2 版本样式）
+   底部联系转化区（V2 版本）
    ======================================== */
-.footer {
-    background: #f8f9fa;
-    padding: 60px 0 30px;
+.footer-cta {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 80px 0;
+    border-top: 1px solid #e8e8e8;
 }
 
+.cta-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.cta-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.cta-text h2 span {
+    color: var(--color-blue);
+}
+
+.cta-text p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.qr-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.qr-box .qr-image {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 8px;
+    background: #fff;
+}
+
+.qr-box span {
+    font-size: 14px;
+    color: #666;
+}
+
+.cta-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cta-label {
+    font-size: 15px;
+    color: var(--color-blue);
+    font-weight: 500;
+}
+
+.cta-phone {
+    font-size: 16px;
+    color: #666;
+}
+
+.cta-phone .phone-number {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-black);
+}
+
+.btn-large {
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ========================================
+   底部导航栏（深灰色）
+   ======================================== */
 .footer-bottom {
-    background: #f8f9fa;
+    background: #2a2a2a;
+    padding: 60px 0 30px;
+    color: #ccc;
 }
 
 .footer-grid-v2 {
@@ -712,9 +800,10 @@ body {
     grid-template-columns: 320px 1fr;
     gap: 60px;
     padding-bottom: 40px;
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* 底部导航栏样式 */
 .footer-brand {
     display: flex;
     flex-direction: column;
@@ -730,6 +819,9 @@ body {
 .footer-logo .logo-icon {
     height: 40px;
     width: auto;
+    background: #fff;
+    padding: 4px;
+    border-radius: 4px;
 }
 
 .footer-logo-text {
@@ -740,12 +832,12 @@ body {
 .footer-logo-text span {
     font-size: 18px;
     font-weight: 600;
-    color: var(--color-black);
+    color: #fff;
 }
 
 .footer-logo-text small {
     font-size: 13px;
-    color: #666;
+    color: #999;
     margin-top: 2px;
 }
 
@@ -769,7 +861,7 @@ body {
 
 .footer-contact p {
     font-size: 14px;
-    color: var(--color-black);
+    color: #ccc;
     line-height: 1.6;
     margin: 0;
 }
@@ -783,7 +875,7 @@ body {
 .footer-col h4 {
     font-size: 15px;
     font-weight: 600;
-    color: var(--color-black);
+    color: #fff;
     margin-bottom: 20px;
 }
 
@@ -798,14 +890,14 @@ body {
 }
 
 .footer-col a {
-    color: #666;
+    color: #ccc;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s ease;
 }
 
 .footer-col a:hover {
-    color: var(--color-blue);
+    color: #fff;
 }
 
 .footer-copyright {
