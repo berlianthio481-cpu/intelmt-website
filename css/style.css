@@ -376,24 +376,24 @@ body {
    解决方案模块
    ======================================== */
 .solutions-section {
-    padding: 60px 0;
+    padding: 50px 0;
     background: var(--color-white);
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .section-header h2 {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
     color: var(--color-black);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .section-header p {
-    font-size: 16px;
+    font-size: 15px;
     color: #666;
 }
 
@@ -412,39 +412,39 @@ body {
 .solutions-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: 20px;
 }
 
 .solution-card {
-    padding: 32px 24px;
+    padding: 24px 20px;
     background: var(--color-white);
     border: 1px solid #e8e8e8;
-    border-radius: 12px;
+    border-radius: 10px;
     transition: all 0.3s ease;
 }
 
 .solution-card:hover {
     border-color: var(--color-blue);
-    box-shadow: 0 8px 30px rgba(53, 173, 243, 0.1);
-    transform: translateY(-4px);
+    box-shadow: 0 6px 24px rgba(53, 173, 243, 0.08);
+    transform: translateY(-3px);
 }
 
 .solution-icon {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .solution-card h3 {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     color: var(--color-black);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .solution-card p {
     font-size: 14px;
     color: #666;
-    line-height: 1.6;
-    margin-bottom: 16px;
+    line-height: 1.5;
+    margin-bottom: 14px;
 }
 
 .solution-link {
@@ -465,7 +465,7 @@ body {
    ======================================== */
 .cases-section {
     position: relative;
-    padding: 60px 0;
+    padding: 50px 0;
     background: #0a1a2e;
     overflow: hidden;
 }
@@ -490,12 +490,12 @@ body {
 .cases-tabs {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    margin-bottom: 40px;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
 .case-tab {
-    padding: 10px 24px;
+    padding: 8px 20px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.3);
     color: var(--color-white);
@@ -518,9 +518,9 @@ body {
 
 .case-item {
     display: none;
-    padding: 40px;
+    padding: 30px;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
+    border-radius: 10px;
     backdrop-filter: blur(10px);
 }
 
@@ -535,23 +535,23 @@ body {
 }
 
 .case-info h3 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
     color: var(--color-white);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .case-tag {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--color-blue);
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .case-desc {
-    font-size: 15px;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 24px;
-    line-height: 1.6;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 .case-achievements {
@@ -577,7 +577,7 @@ body {
    生态共建模块
    ======================================== */
 .ecosystem-section {
-    padding: 60px 0;
+    padding: 50px 0;
     background: var(--color-white);
 }
 
@@ -585,14 +585,14 @@ body {
 .ecosystem-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 20px;
 }
 
 .ecosystem-card {
     background: var(--color-white);
     border: 1px solid rgba(53, 173, 243, 0.2);
-    border-radius: 12px;
-    padding: 24px 20px;
+    border-radius: 10px;
+    padding: 20px 16px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -620,28 +620,28 @@ body {
 }
 
 .ecosystem-icon {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background: rgba(53, 173, 243, 0.1);
-    border-radius: 8px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .ecosystem-card h3 {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--color-black);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .ecosystem-card p {
-    font-size: 14px;
+    font-size: 13px;
     color: #666;
-    line-height: 1.6;
-    margin-bottom: 16px;
+    line-height: 1.5;
+    margin-bottom: 12px;
 }
 
 .ecosystem-link {
