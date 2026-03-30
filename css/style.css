@@ -696,70 +696,104 @@ body {
 }
 
 /* ========================================
-   底部模块
+   底部联系转化区（V2 版本）
    ======================================== */
-.footer {
-    background: var(--color-white);
-    padding: 60px 0 30px;
+.footer-cta {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 80px 0;
+    border-top: 1px solid #e8e8e8;
 }
 
-.footer-content {
-    background: var(--color-white);
-}
-
-.footer-grid {
+.cta-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #e8e8e8;
+    align-items: center;
 }
 
-.footer-contact h3 {
-    font-size: 18px;
-    font-weight: 600;
+.cta-text h2 {
+    font-size: 32px;
+    font-weight: 700;
     color: var(--color-black);
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    line-height: 1.4;
 }
 
-.contact-item {
+.cta-text h2 span {
+    color: var(--color-blue);
+}
+
+.cta-text p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.cta-actions {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 20px;
+    align-items: center;
+    gap: 40px;
 }
 
-.contact-label {
-    font-size: 13px;
-    color: #999;
-}
-
-.contact-value {
-    font-size: 15px;
-    color: var(--color-black);
-    line-height: 1.6;
-}
-
-.footer-wechat {
+.qr-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
 }
 
-.footer-wechat .qr-image {
-    width: 160px;
-    height: 160px;
+.qr-box .qr-image {
+    width: 180px;
+    height: 180px;
     object-fit: contain;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 8px;
+    background: #fff;
 }
 
-.footer-wechat p {
+.qr-box span {
     font-size: 14px;
     color: #666;
 }
 
+.cta-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cta-label {
+    font-size: 15px;
+    color: var(--color-blue);
+    font-weight: 500;
+}
+
+.cta-phone {
+    font-size: 16px;
+    color: #666;
+}
+
+.cta-phone .phone-number {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-black);
+}
+
+.btn-large {
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* 页脚版权 */
+.footer-bottom {
+    background: var(--color-white);
+    padding: 30px 0;
+    border-top: 1px solid #e8e8e8;
+}
+
 .footer-copyright {
-    padding-top: 30px;
     text-align: center;
 }
 
