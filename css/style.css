@@ -173,10 +173,8 @@ body {
 }
 
 .hero-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    padding: 60px 20px 40px;
+    max-width: 900px;
+    padding: 80px 20px 60px;
     position: relative;
     z-index: 1;
 }
@@ -185,6 +183,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 .hero-slogan {
@@ -209,7 +209,9 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 24px;
-    margin-top: 32px;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 700px;
 }
 
 .insights-title {
@@ -219,41 +221,42 @@ body {
     margin-bottom: 20px;
     padding-bottom: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
 }
 
 .insights-list {
     list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
 }
 
 .insight-item {
-    margin-bottom: 16px;
-}
-
-.insight-item:last-child {
-    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .insight-tag {
-    display: inline-block;
     font-size: 12px;
     font-weight: 600;
     color: var(--color-blue);
-    margin-bottom: 6px;
 }
 
 .insight-link {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    gap: 8px;
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
-    padding: 10px 14px;
+    padding: 12px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     transition: all 0.3s ease;
+    flex: 1;
 }
 
 .insight-link:hover {
@@ -263,9 +266,7 @@ body {
 
 .insight-text {
     flex: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    line-height: 1.4;
 }
 
 .insight-link svg {
@@ -1131,18 +1132,14 @@ body {
    响应式设计
    ======================================== */
 @media (max-width: 1024px) {
-    .hero-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .hero-product {
-        order: -1;
-    }
-    
     .solutions-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .insights-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
     
     .ecosystem-grid {
         grid-template-columns: 1fr;
@@ -1174,6 +1171,10 @@ body {
     
     .hero-desc {
         font-size: 16px;
+    }
+    
+    .insights-list {
+        grid-template-columns: 1fr;
     }
     
     .hero-cta {
