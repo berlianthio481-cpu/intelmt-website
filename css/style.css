@@ -1231,3 +1231,253 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ========================================
+   客户案例详情页样式
+   ======================================== */
+
+/* 页面头部 */
+.page-header {
+    padding: 140px 0 60px;
+    background: linear-gradient(135deg, #0a1a2e 0%, #1a3a5c 50%, #0f2840 100%);
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.page-header p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* 分类筛选区 */
+.cases-filter-section {
+    padding: 40px 0;
+    background: var(--color-white);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* 案例详情容器 */
+.cases-detail-section {
+    padding: 60px 0;
+    background: #F8FAFC;
+}
+
+/* 单个案例详情 */
+.case-detail {
+    background: var(--color-white);
+    border-radius: 16px;
+    padding: 48px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+}
+
+/* 案例头部 */
+.case-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding-bottom: 32px;
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 40px;
+}
+
+.case-logo .logo-placeholder {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+.case-logo svg {
+    width: 80px;
+    height: 80px;
+}
+
+.case-title-info h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: 8px;
+}
+
+.case-subtitle {
+    font-size: 16px;
+    color: #6b7280;
+}
+
+/* 案例内容区 */
+.case-detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.case-section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-blue);
+    margin-bottom: 20px;
+    padding-left: 16px;
+    border-left: 4px solid var(--color-blue);
+}
+
+/* 医院信息网格 */
+.case-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 24px;
+    background: #F8FAFC;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.info-label {
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.info-value {
+    font-size: 16px;
+    color: var(--color-black);
+    font-weight: 600;
+}
+
+.case-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #374151;
+}
+
+/* 医院照片画廊 */
+.case-image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.gallery-placeholder {
+    aspect-ratio: 16/9;
+    background: #F3F4F6;
+    border: 2px dashed #D1D5DB;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #9CA3AF;
+    font-size: 14px;
+}
+
+.gallery-placeholder svg {
+    width: 60px;
+    height: 60px;
+}
+
+/* 合作成效 */
+.case-achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.achievement-item {
+    display: flex;
+    gap: 20px;
+    padding: 24px;
+    background: #F8FAFC;
+    border-radius: 12px;
+    border-left: 4px solid var(--color-blue);
+}
+
+.achievement-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.achievement-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.achievement-content h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-black);
+    margin-bottom: 8px;
+}
+
+.achievement-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #6b7280;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .case-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .case-detail {
+        padding: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 32px;
+    }
+    
+    .case-detail-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .case-title-info h2 {
+        font-size: 24px;
+    }
+    
+    .case-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .case-image-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .achievement-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .achievement-icon {
+        margin: 0 auto;
+    }
+}
