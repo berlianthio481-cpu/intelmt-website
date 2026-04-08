@@ -94,7 +94,7 @@
                             <span class="stat-value">福建省福州市</span>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </section>
@@ -105,40 +105,55 @@
 
             <!-- 案例标签导航 -->
             <div class="case-tabs">
-                <button class="tab-btn active" data-tab="overview">
+                <a href="#overview" class="tab-btn">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/>
                         <path d="M10 6V10L13 13" stroke="currentColor" stroke-width="2"/>
                     </svg>
                     医院概况
-                </button>
-                <button class="tab-btn" data-tab="solution">
+                </a>
+                <a href="#solution" class="tab-btn">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <rect x="3" y="3" width="14" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
                         <path d="M3 9H17M9 17V9" stroke="currentColor" stroke-width="2"/>
                     </svg>
                     合作内容
-                </button>
-                <button class="tab-btn" data-tab="achievements">
+                </a>
+                <a href="#achievements" class="tab-btn">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M10 2L12.5 7L18 8L14 12L15 17.5L10 15L5 17.5L6 12L2 8L7.5 7L10 2Z" stroke="currentColor" stroke-width="2"/>
                     </svg>
                     建设成效
-                </button>
+                </a>
             </div>
 
-            <!-- 标签内容 -->
-            <div class="case-tab-content">
+            <!-- 案例内容 -->
+            <div class="case-content">
                 <!-- 医院概况 -->
-                <div class="tab-panel active" id="overview">
-                    <div class="case-description-block">
+                <section id="overview" class="content-section">
+                    <h2 class="section-title">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        医院概况
+                    </h2>
+                    <div class="section-content">
                         <p>福建医科大学附属第一医院创建于 1937 年，是福建省首家公立西医医院。医院综合实力雄厚，是福建省高水平医院，并被国家发改委、国家卫健委确定为首批全国疑难病症诊治能力提升工程项目医院和中国罕见病协作网福建省牵头单位。</p>
                         <p>医院荣登"中国医院综合排行百强榜""中国医院科技影响力百强榜""中国医院竞争力•顶级医院百强榜""智慧医院 HIC100 强"。与复旦大学附属华山医院共建的复旦大学附属华山医院福建医院（福建医科大学附属第一医院滨海院区）为全国首批 10 家国家区域医疗中心。</p>
                     </div>
-                </div>
+                </section>
 
                 <!-- 合作内容 -->
-                <div class="tab-panel" id="solution">
+                <section id="solution" class="content-section">
+                    <h2 class="section-title">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M3 9H21M9 21V9" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        合作内容
+                    </h2>
+                    <div class="section-content">
                     <div class="case-description-block">
                         <h3>合作背景</h3>
                         <p>【待补充】医院在智慧患者服务、互联网医院建设、电子病历评级等方面的需求和痛点。</p>
@@ -181,10 +196,17 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 <!-- 建设成效 -->
-                <div class="tab-panel" id="achievements">
+                <section id="achievements" class="content-section">
+                    <h2 class="section-title">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        建设成效
+                    </h2>
+                    <div class="section-content">
                     <div class="achievements-grid">
                         <div class="achievement-card">
                             <div class="achievement-number">
@@ -344,22 +366,44 @@
 
     <script src="js/main.js"></script>
     <script>
-        // 标签切换
+        // 锚点导航高亮
         document.addEventListener('DOMContentLoaded', function() {
             const tabBtns = document.querySelectorAll('.tab-btn');
-            const tabPanels = document.querySelectorAll('.tab-panel');
+            const sections = document.querySelectorAll('.content-section');
             
+            // 滚动监听
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY + 150;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        tabBtns.forEach(btn => {
+                            btn.classList.remove('active');
+                            if (btn.getAttribute('href') === '#' + sectionId) {
+                                btn.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            });
+            
+            // 平滑滚动
             tabBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const tabId = this.dataset.tab;
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
                     
-                    // 移除所有激活状态
-                    tabBtns.forEach(b => b.classList.remove('active'));
-                    tabPanels.forEach(p => p.classList.remove('active'));
-                    
-                    // 激活当前标签
-                    this.classList.add('active');
-                    document.getElementById(tabId).classList.add('active');
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
                 });
             });
         });

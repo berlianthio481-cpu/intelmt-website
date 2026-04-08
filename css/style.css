@@ -1449,6 +1449,9 @@ body {
     padding: 12px;
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 72px;
+    z-index: 100;
 }
 
 .tab-btn {
@@ -1462,7 +1465,7 @@ body {
     font-size: 15px;
     font-weight: 500;
     color: #6b7280;
-    cursor: pointer;
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
@@ -1481,32 +1484,50 @@ body {
     height: 20px;
 }
 
-/* 标签内容区 */
-.case-tab-content {
+/* 案例内容区 */
+.case-content {
     background: var(--color-white);
     border-radius: 16px;
     padding: 40px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 }
 
-.tab-panel {
-    display: none;
+/* 内容区块 */
+.content-section {
+    scroll-margin-top: 120px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e5e7eb;
 }
 
-.tab-panel.active {
-    display: block;
-    animation: fadeIn 0.3s ease;
+.content-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* 区块标题 */
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.section-title svg {
+    width: 24px;
+    height: 24px;
+    color: var(--color-blue);
+}
+
+/* 区块内容 */
+.section-content {
+    color: #374151;
 }
 
 /* 信息网格 */
