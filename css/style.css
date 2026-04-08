@@ -96,7 +96,7 @@ body {
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
-    padding: 8px 0;
+    padding: 8px 12px;
 }
 
 .nav-menu a:hover,
@@ -171,8 +171,8 @@ body {
     position: static;
 }
 
-.dropdown-menu a::after {
-    display: none;
+.dropdown-menu a {
+    padding: 10px 20px;
 }
 
 .dropdown-menu a:hover {
