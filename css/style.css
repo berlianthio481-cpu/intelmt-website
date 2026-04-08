@@ -1303,13 +1303,24 @@ body {
 /* 医院 Logo */
 .case-hero-logo {
     margin-bottom: 40px;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
 }
 
 .case-hero-logo img {
-    width: 120px;
+    width: auto;
     height: 120px;
     object-fit: contain;
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+}
+
+/* 裁剪横版 Logo，只显示左侧圆形徽章 */
+.case-hero-logo img.logo-crop {
+    width: 120px;
+    height: 120px;
+    object-position: left center;
+    clip-path: inset(0 50% 0 0);
 }
 
 /* 医院信息统计卡片 */
