@@ -1236,6 +1236,167 @@ body {
    独立案例详情页样式（联众风格）
    ======================================== */
 
+/* 案例首屏 - 医院照片背景 */
+.case-hero {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #0a1a2e;
+}
+
+.case-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.hero-bg-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: linear-gradient(135deg, #1a3a5c 0%, #0f2840 100%);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+}
+
+.hero-bg-placeholder svg {
+    width: 80px;
+    height: 80px;
+}
+
+/* 遮罩层 */
+.case-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(10, 26, 46, 0.7) 0%, rgba(10, 26, 46, 0.5) 50%, rgba(10, 26, 46, 0.8) 100%);
+    z-index: 2;
+}
+
+/* 首屏内容 */
+.case-hero-content {
+    position: relative;
+    z-index: 3;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--color-white);
+}
+
+/* 医院 Logo */
+.case-hero-logo .logo-placeholder {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+    margin-bottom: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.case-hero-logo svg {
+    width: 80px;
+    height: 80px;
+}
+
+/* 医院名称 */
+.case-hero-title {
+    margin-bottom: 48px;
+}
+
+.case-hero-title h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 12px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.case-hero-title .subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+}
+
+/* 医院信息统计卡片 */
+.case-hero-stats {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 28px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(53, 173, 243, 0.2);
+    border-radius: 12px;
+    color: var(--color-blue);
+}
+
+.stat-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stat-content .stat-label {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 4px;
+}
+
+.stat-content .stat-value {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
 /* 案例详情主容器 */
 .case-single-section {
     padding: 60px 0;
@@ -1565,6 +1726,36 @@ body {
 }
 
 @media (max-width: 768px) {
+    .case-hero {
+        height: 500px;
+    }
+    
+    .case-hero-title h1 {
+        font-size: 28px;
+    }
+    
+    .case-hero-title .subtitle {
+        font-size: 14px;
+    }
+    
+    .case-hero-stats {
+        gap: 16px;
+    }
+    
+    .stat-item {
+        padding: 16px 20px;
+        gap: 10px;
+    }
+    
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .stat-content .stat-value {
+        font-size: 16px;
+    }
+    
     .case-tab-content {
         padding: 24px;
     }

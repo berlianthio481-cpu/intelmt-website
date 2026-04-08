@@ -36,34 +36,96 @@
         </div>
     </nav>
 
-    <!-- 页面头部 -->
-    <section class="page-header">
-        <div class="container">
-            <h1>客户案例</h1>
-            <p>行业实践应用，助力客户业务增长</p>
+    <!-- 案例首屏 - 医院照片背景 -->
+    <section class="case-hero">
+        <div class="case-hero-bg">
+            <!-- 待替换：医院实景照片 -->
+            <div class="hero-bg-placeholder">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                    <rect x="10" y="10" width="60" height="60" rx="8" stroke="#FFFFFF" stroke-width="2"/>
+                    <circle cx="40" cy="40" r="15" stroke="#FFFFFF" stroke-width="2"/>
+                </svg>
+                <span>医院实景照片（待替换）</span>
+            </div>
+        </div>
+        <div class="case-hero-overlay"></div>
+        <div class="container case-hero-content">
+            <!-- 医院 Logo -->
+            <div class="case-hero-logo">
+                <!-- 待替换：医院 Logo -->
+                <div class="logo-placeholder">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <circle cx="40" cy="40" r="36" stroke="#FFFFFF" stroke-width="2"/>
+                        <path d="M40 24V40L48 48" stroke="#FFFFFF" stroke-width="2"/>
+                    </svg>
+                    <span>医院 Logo</span>
+                </div>
+            </div>
+            
+            <!-- 医院名称 -->
+            <div class="case-hero-title">
+                <h1>福建医科大学附属第一医院</h1>
+                <p class="subtitle">上海华山医院福建医院 · 国家区域医疗中心</p>
+            </div>
+            
+            <!-- 医院信息卡片 -->
+            <div class="case-hero-stats">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-label">医院等级</span>
+                        <span class="stat-value">三级甲等</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M3 9H21M9 21V9" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-label">院区数量</span>
+                        <span class="stat-value">6 个院区</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-label">创建时间</span>
+                        <span class="stat-value">1937 年</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2Z" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="9" r="3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-label">所在地区</span>
+                        <span class="stat-value">福建省福州市</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- 案例详情 -->
     <section class="case-single-section">
         <div class="container">
-            <!-- 案例头部 -->
-            <div class="case-single-header">
-                <div class="case-logo">
-                    <!-- 待替换：医院 Logo -->
-                    <div class="logo-placeholder">
-                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                            <circle cx="40" cy="40" r="36" stroke="#35ADF3" stroke-width="2"/>
-                            <path d="M40 24V40L48 48" stroke="#35ADF3" stroke-width="2"/>
-                        </svg>
-                        <span>医院 Logo</span>
-                    </div>
-                </div>
-                <div class="case-title-info">
-                    <h2>福建医科大学附属第一医院</h2>
-                    <p class="case-subtitle">上海华山医院福建医院 · 国家区域医疗中心</p>
-                </div>
-            </div>
 
             <!-- 案例标签导航 -->
             <div class="case-tabs">
