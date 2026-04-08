@@ -1302,34 +1302,14 @@ body {
 
 /* 医院 Logo */
 .case-hero-logo {
-    margin-bottom: 32px;
-}
-
-.case-hero-logo img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
-}
-
-/* 医院名称 */
-.case-hero-title {
     margin-bottom: 40px;
 }
 
-.case-hero-title h1 {
-    font-size: 42px;
-    font-weight: 700;
-    color: var(--color-white);
-    margin-bottom: 12px;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    line-height: 1.2;
-}
-
-.case-hero-title .subtitle {
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 400;
+.case-hero-logo img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
 }
 
 /* 医院信息统计卡片 */
