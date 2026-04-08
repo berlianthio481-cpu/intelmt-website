@@ -1301,26 +1301,15 @@ body {
 }
 
 /* 医院 Logo */
-.case-hero-logo .logo-placeholder {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 11px;
+.case-hero-logo {
     margin-bottom: 32px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-.case-hero-logo svg {
-    width: 60px;
-    height: 60px;
+.case-hero-logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
 }
 
 /* 医院名称 */
