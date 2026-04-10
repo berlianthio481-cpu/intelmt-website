@@ -8,6 +8,195 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 页面专用样式 */
+        .solution-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 160px 0 80px;
+            color: white;
+            margin-top: 72px;
+        }
+        
+        .solution-hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .solution-hero .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            max-width: 800px;
+        }
+        
+        .solution-section {
+            padding: 80px 0;
+        }
+        
+        .solution-section .container {
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2em;
+            color: var(--color-blue);
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            font-size: 1.1em;
+            color: #666;
+        }
+        
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .module-card {
+            background: #f8f9ff;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+        }
+        
+        .module-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .module-content {
+            padding: 25px;
+        }
+        
+        .module-content h3 {
+            color: var(--color-blue);
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .module-content ul {
+            list-style: none;
+            color: #666;
+        }
+        
+        .module-content li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .module-content li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-blue);
+            font-weight: bold;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid var(--color-blue);
+        }
+        
+        .feature-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, var(--color-blue) 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5em;
+            color: white;
+        }
+        
+        .feature-card h3 {
+            color: var(--color-blue);
+            margin-bottom: 15px;
+        }
+        
+        .value-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .value-table th,
+        .value-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 2px solid #e8eaff;
+        }
+        
+        .value-table th {
+            background: #f8f9ff;
+            color: var(--color-blue);
+            font-weight: 600;
+        }
+        
+        .value-table tr:hover {
+            background: #f8f9ff;
+        }
+        
+        .clients-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .client-item {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .client-icon {
+            font-size: 2em;
+        }
+        
+        @media (max-width: 768px) {
+            .solution-hero h1 {
+                font-size: 1.8em;
+            }
+            
+            .modules-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- 导航栏 -->
@@ -72,303 +261,150 @@
         </div>
     </nav>
 
-    <!-- 方案首屏 -->
-    <section class="case-hero">
-        <div class="case-hero-bg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-            <!-- 渐变背景 -->
+    <!-- 页面头部 -->
+    <section class="solution-hero">
+        <div class="container">
+            <h1>🏥 就医全旅程解决方案</h1>
+            <p class="subtitle">电子导引单 —— 将医院诊前、诊中、诊后的就医全流程节点进行串联并提供智能导医服务，实现患者就医从"人找服务"到"服务找人"的转变</p>
         </div>
-        <div class="case-hero-overlay"></div>
-        <div class="container case-hero-content">
-            <div class="hero-left-content">
-                <!-- 方案图标 -->
-                <div class="case-hero-logo">
-                    <div style="font-size: 4em; color: white;">🏥</div>
+    </section>
+
+    <!-- 核心模块 -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>📦 核心模块</h2>
+                <p>三大就医场景全覆盖</p>
+            </div>
+            <div class="modules-grid">
+                <div class="module-card">
+                    <img src="images/门诊.jpg" alt="门诊全旅程" class="module-image">
+                    <div class="module-content">
+                        <h3>🚪 门诊全旅程</h3>
+                        <ul>
+                            <li><strong>诊前：</strong>预约挂号、智能分诊、就诊提醒</li>
+                            <li><strong>诊中：</strong>报到候诊、检查引导、缴费取药</li>
+                            <li><strong>诊后：</strong>报告查询、复诊预约、健康随访</li>
+                        </ul>
+                    </div>
                 </div>
                 
-                <!-- 方案名称 -->
-                <div class="case-hero-title">
-                    <h1>就医全旅程解决方案</h1>
-                    <p class="subtitle">电子导引单 —— 实现患者就医从"人找服务"到"服务找人"的转变</p>
+                <div class="module-card">
+                    <img src="images/住院.jpg" alt="住院全旅程" class="module-image">
+                    <div class="module-content">
+                        <h3>🏨 住院全旅程</h3>
+                        <ul>
+                            <li><strong>入院：</strong>床位预约、入院办理、须知告知</li>
+                            <li><strong>在院：</strong>每日清单、检查安排、费用查询</li>
+                            <li><strong>出院：</strong>出院结算、带药指导、随访计划</li>
+                        </ul>
+                    </div>
                 </div>
                 
-                <!-- 方案信息卡片 -->
-                <div class="case-hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
-                                <path d="M3 9H21M9 21V9" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <div class="stat-content">
-                            <span class="stat-label">覆盖场景</span>
-                            <span class="stat-value">门诊/住院/体检</span>
-                        </div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <div class="stat-content">
-                            <span class="stat-label">服务时长</span>
-                            <span class="stat-value">7×24 小时</span>
-                        </div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <div class="stat-content">
-                            <span class="stat-label">服务医院</span>
-                            <span class="stat-value">5+ 家三甲医院</span>
-                        </div>
+                <div class="module-card">
+                    <img src="images/体检.jpg" alt="体检全旅程" class="module-image">
+                    <div class="module-content">
+                        <h3>📋 体检全旅程</h3>
+                        <ul>
+                            <li><strong>检前：</strong>套餐选择、预约登记、注意事项</li>
+                            <li><strong>检中：</strong>科室导航、排队提醒、进度查询</li>
+                            <li><strong>检后：</strong>报告解读、异常提醒、健康管理</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 方案详情 -->
-    <section class="case-single-section">
+    <!-- 特色亮点 -->
+    <section class="solution-section" style="background: #f8f9ff;">
         <div class="container">
-
-            <!-- 方案标签导航 -->
-            <div class="case-tabs">
-                <a href="#overview" class="tab-btn">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/>
-                        <path d="M10 6V10L13 13" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                    方案概述
-                </a>
-                <a href="#modules" class="tab-btn">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <rect x="3" y="3" width="14" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
-                        <path d="M3 9H17M9 17V9" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                    核心模块
-                </a>
-                <a href="#features" class="tab-btn">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10 2L12.5 7L18 8L14 12L15 17.5L10 15L5 17.5L6 12L2 8L7.5 7L10 2Z" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                    特色亮点
-                </a>
-                <a href="#value" class="tab-btn">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                    创造价值
-                </a>
+            <div class="section-header">
+                <h2>✨ 特色亮点</h2>
+                <p>三大核心优势</p>
             </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>扫码即服务</h3>
+                    <p>患者只需扫描电子导引单二维码，即可获取全流程就医指引，无需下载 APP，即用即走</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI 智能</h3>
+                    <p>7×24 小时智能导医，AI 智能问答随时解答就医疑问，智能分诊精准推荐科室</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👩‍</div>
+                    <h3>客服辅助</h3>
+                    <p>人机协同服务升级，AI 无法解决的问题无缝转人工，专业客服团队在线支持</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- 方案内容 -->
-            <div class="case-content">
-                <!-- 方案概述 -->
-                <section id="overview" class="content-section">
-                    <h2 class="section-title">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                        方案概述
-                    </h2>
-                    <div class="section-content">
-                        <p>就医全旅程即"电子导引单"，旨在将医院诊前、诊中、诊后的就医全流程节点进行串联并提供智能导医服务，实现患者就医从"人找服务"到"服务找人"的转变。</p>
-                        <p>通过智能化、个性化的就医引导，帮助患者快速了解就医流程，减少等待时间，提升就医体验；同时帮助医院优化服务流程，提高运营效率。</p>
-                    </div>
-                </section>
+    <!-- 创造价值 -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>💎 创造价值</h2>
+                <p>可量化的服务提升</p>
+            </div>
+            <table class="value-table">
+                <thead>
+                    <tr>
+                        <th>价值维度</th>
+                        <th>提升效果</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>⏱️ 就医时长</td>
+                        <td>显著缩短患者等待时间</td>
+                    </tr>
+                    <tr>
+                        <td>😊 满意度</td>
+                        <td>大幅提升患者就医体验</td>
+                    </tr>
+                    <tr>
+                        <td>📊 模块使用率</td>
+                        <td>提高医院服务模块活跃度</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 
-                <!-- 核心模块 -->
-                <section id="modules" class="content-section">
-                    <h2 class="section-title">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M3 9H21M9 21V9" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                        核心模块
-                    </h2>
-                    <div class="section-content">
-                        <div class="solution-list">
-                            <div class="solution-item">
-                                <div class="solution-icon">
-                                    <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
-                                        <rect width="48" height="48" rx="8" fill="#35ADF3" fill-opacity="0.1"/>
-                                        <path d="M24 12V36M12 24H36" stroke="#35ADF3" stroke-width="3" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                                <div class="solution-content">
-                                    <h3>门诊全旅程</h3>
-                                    <p>覆盖门诊就医全流程，从预约挂号到诊后随访，为患者提供一站式就医引导服务。</p>
-                                    <ul class="feature-list">
-                                        <li><strong>诊前：</strong>预约挂号、智能分诊、就诊提醒</li>
-                                        <li><strong>诊中：</strong>报到候诊、检查引导、缴费取药</li>
-                                        <li><strong>诊后：</strong>报告查询、复诊预约、健康随访</li>
-                                    </ul>
-                                </div>
-                                <div class="solution-image">
-                                    <img src="images/门诊.jpg" alt="门诊全旅程">
-                                </div>
-                            </div>
-
-                            <div class="solution-item">
-                                <div class="solution-icon">
-                                    <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
-                                        <rect width="48" height="48" rx="8" fill="#62D0EC" fill-opacity="0.1"/>
-                                        <path d="M12 36V16L24 8L36 16V36H12Z" stroke="#62D0EC" stroke-width="3"/>
-                                        <path d="M20 36V24H28V36" stroke="#62D0EC" stroke-width="3"/>
-                                    </svg>
-                                </div>
-                                <div class="solution-content">
-                                    <h3>住院全旅程</h3>
-                                    <p>为住院患者提供从入院到出院的全流程服务管理，让住院更安心、更便捷。</p>
-                                    <ul class="feature-list">
-                                        <li><strong>入院：</strong>床位预约、入院办理、须知告知</li>
-                                        <li><strong>在院：</strong>每日清单、检查安排、费用查询</li>
-                                        <li><strong>出院：</strong>出院结算、带药指导、随访计划</li>
-                                    </ul>
-                                </div>
-                                <div class="solution-image">
-                                    <img src="images/住院.jpg" alt="住院全旅程">
-                                </div>
-                            </div>
-
-                            <div class="solution-item">
-                                <div class="solution-icon">
-                                    <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
-                                        <rect width="48" height="48" rx="8" fill="#667eea" fill-opacity="0.1"/>
-                                        <path d="M8 12H40M8 24H40M8 36H40" stroke="#667eea" stroke-width="3" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                                <div class="solution-content">
-                                    <h3>体检全旅程</h3>
-                                    <p>优化体检服务流程，提供检前预约、检中引导、检后管理的完整体检服务体验。</p>
-                                    <ul class="feature-list">
-                                        <li><strong>检前：</strong>套餐选择、预约登记、注意事项</li>
-                                        <li><strong>检中：</strong>科室导航、排队提醒、进度查询</li>
-                                        <li><strong>检后：</strong>报告解读、异常提醒、健康管理</li>
-                                    </ul>
-                                </div>
-                                <div class="solution-image">
-                                    <img src="images/体检.jpg" alt="体检全旅程">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 特色亮点 -->
-                <section id="features" class="content-section">
-                    <h2 class="section-title">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                        特色亮点
-                    </h2>
-                    <div class="section-content">
-                        <div class="feature-grid-3">
-                            <div class="feature-box">
-                                <div class="feature-icon-large">📱</div>
-                                <h3>扫码即服务</h3>
-                                <p>患者只需扫描电子导引单二维码，即可获取全流程就医指引，无需下载 APP，即用即走</p>
-                            </div>
-                            <div class="feature-box">
-                                <div class="feature-icon-large">🤖</div>
-                                <h3>AI 智能</h3>
-                                <p>7×24 小时智能导医，AI 智能问答随时解答就医疑问，智能分诊精准推荐科室</p>
-                            </div>
-                            <div class="feature-box">
-                                <div class="feature-icon-large">👩‍</div>
-                                <h3>客服辅助</h3>
-                                <p>人机协同服务升级，AI 无法解决的问题无缝转人工，专业客服团队在线支持</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 创造价值 -->
-                <section id="value" class="content-section">
-                    <h2 class="section-title">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                        创造价值
-                    </h2>
-                    <div class="section-content">
-                        <div class="value-table-container">
-                            <table class="value-table">
-                                <thead>
-                                    <tr>
-                                        <th>价值维度</th>
-                                        <th>提升效果</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>⏱️ 就医时长</strong></td>
-                                        <td>显著缩短患者等待时间，提升就医效率</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>😊 满意度</strong></td>
-                                        <td>大幅提升患者就医体验，改善医患关系</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>📊 模块使用率</strong></td>
-                                        <td>提高医院服务模块活跃度，优化资源配置</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 客户案例 -->
-                <section id="clients" class="content-section">
-                    <h2 class="section-title">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                        服务客户
-                    </h2>
-                    <div class="section-content">
-                        <div class="client-grid">
-                            <div class="client-card">
-                                <div class="client-icon">🏥</div>
-                                <h4>福建医科大学附属第一医院</h4>
-                                <p>三级甲等 · 国家区域医疗中心</p>
-                            </div>
-                            <div class="client-card">
-                                <div class="client-icon">🏥</div>
-                                <h4>贵州医科大学附属医院</h4>
-                                <p>三级甲等 · 省级重点医院</p>
-                            </div>
-                            <div class="client-card">
-                                <div class="client-icon">🏥</div>
-                                <h4>十堰太和医院</h4>
-                                <p>三级甲等 · 区域性医疗中心</p>
-                            </div>
-                            <div class="client-card">
-                                <div class="client-icon">🏥</div>
-                                <h4>福建省立医院</h4>
-                                <p>三级甲等 · 省级综合医院</p>
-                            </div>
-                            <div class="client-card">
-                                <div class="client-icon">🏥</div>
-                                <h4>新疆医科大学附属第一医院</h4>
-                                <p>三级甲等 · 区域医疗中心</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+    <!-- 客户声音 -->
+    <section class="solution-section" style="background: #f8f9ff;">
+        <div class="container">
+            <div class="section-header">
+                <h2>🏥 客户声音</h2>
+                <p>已服务医院</p>
+            </div>
+            <div class="clients-list">
+                <div class="client-item">
+                    <span class="client-icon">🏥</span>
+                    <span>福建医科大学附属第一医院</span>
+                </div>
+                <div class="client-item">
+                    <span class="client-icon">🏥</span>
+                    <span>贵州医科大学附属医院</span>
+                </div>
+                <div class="client-item">
+                    <span class="client-icon">🏥</span>
+                    <span>十堰太和医院</span>
+                </div>
+                <div class="client-item">
+                    <span class="client-icon">🏥</span>
+                    <span>福建省立医院</span>
+                </div>
+                <div class="client-item">
+                    <span class="client-icon">🏥</span>
+                    <span>新疆医科大学附属第一医院</span>
+                </div>
             </div>
         </div>
     </section>
@@ -477,48 +513,5 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        // 锚点导航高亮
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabBtns = document.querySelectorAll('.tab-btn');
-            const sections = document.querySelectorAll('.content-section');
-            
-            // 滚动监听
-            window.addEventListener('scroll', function() {
-                const scrollPosition = window.scrollY + 150;
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-                    const sectionId = section.getAttribute('id');
-                    
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                        tabBtns.forEach(btn => {
-                            btn.classList.remove('active');
-                            if (btn.getAttribute('href') === '#' + sectionId) {
-                                btn.classList.add('active');
-                            }
-                        });
-                    }
-                });
-            });
-            
-            // 平滑滚动
-            tabBtns.forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    
-                    if (targetSection) {
-                        window.scrollTo({
-                            top: targetSection.offsetTop - 100,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
