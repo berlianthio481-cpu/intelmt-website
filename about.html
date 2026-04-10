@@ -77,21 +77,22 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         
-        .hero-right-content {
+        .case-hero-content {
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            height: 100%;
         }
         
-        .culture-hero-grid {
+        .culture-hero-full-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
             border-radius: 15px;
-            padding: 30px;
-            min-width: 350px;
+            padding: 40px 60px;
+            max-width: 900px;
         }
         
         .culture-hero-item {
@@ -100,28 +101,21 @@
         }
         
         .culture-hero-icon {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 3em;
+            margin-bottom: 15px;
         }
         
         .culture-hero-label {
-            font-size: 1.1em;
+            font-size: 1.3em;
             font-weight: 600;
-            margin-bottom: 8px;
-            opacity: 0.9;
+            margin-bottom: 10px;
+            opacity: 0.95;
         }
         
         .culture-hero-text {
-            font-size: 0.95em;
-            line-height: 1.5;
-            opacity: 0.85;
-        }
-        
-        .case-hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+            font-size: 1em;
+            line-height: 1.6;
+            opacity: 0.9;
         }
         
         @media (max-width: 768px) {
@@ -129,16 +123,10 @@
                 grid-template-columns: 1fr;
             }
             
-            .case-hero-content {
+            .culture-hero-full-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .hero-right-content {
-                justify-content: flex-start;
-            }
-            
-            .culture-hero-grid {
-                min-width: auto;
+                gap: 30px;
+                padding: 30px;
             }
         }
     </style>
@@ -206,33 +194,22 @@
         </div>
         <div class="case-hero-overlay"></div>
         <div class="container case-hero-content">
-            <div class="hero-left-content">
-                <div class="case-hero-logo">
-                    <div style="font-size: 4em; color: white;">🏢</div>
+            <!-- 企业文化展示 -->
+            <div class="culture-hero-full-grid">
+                <div class="culture-hero-item">
+                    <div class="culture-hero-icon">🎯</div>
+                    <div class="culture-hero-label">使命</div>
+                    <div class="culture-hero-text">为患者解忧，让医院更智慧</div>
                 </div>
-                <div class="case-hero-title">
-                    <h1>关于我们</h1>
-                    <p class="subtitle">全国领先的患者服务数智化解决方案提供商</p>
+                <div class="culture-hero-item">
+                    <div class="culture-hero-icon">👁️</div>
+                    <div class="culture-hero-label">愿景</div>
+                    <div class="culture-hero-text">全国领先的患者服务全面解决方案专家</div>
                 </div>
-            </div>
-            <!-- 右侧企业文化 -->
-            <div class="hero-right-content">
-                <div class="culture-hero-grid">
-                    <div class="culture-hero-item">
-                        <div class="culture-hero-icon">🎯</div>
-                        <div class="culture-hero-label">使命</div>
-                        <div class="culture-hero-text">为患者解忧，让医院更智慧</div>
-                    </div>
-                    <div class="culture-hero-item">
-                        <div class="culture-hero-icon">👁️</div>
-                        <div class="culture-hero-label">愿景</div>
-                        <div class="culture-hero-text">全国领先的患者服务全面解决方案专家</div>
-                    </div>
-                    <div class="culture-hero-item">
-                        <div class="culture-hero-icon">💎</div>
-                        <div class="culture-hero-label">价值观</div>
-                        <div class="culture-hero-text">价值导向、合作共赢、敬业守信、勇于挑战</div>
-                    </div>
+                <div class="culture-hero-item">
+                    <div class="culture-hero-icon">💎</div>
+                    <div class="culture-hero-label">价值观</div>
+                    <div class="culture-hero-text">价值导向、合作共赢、敬业守信、勇于挑战</div>
                 </div>
             </div>
         </div>
