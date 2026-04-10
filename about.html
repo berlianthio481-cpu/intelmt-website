@@ -8,6 +8,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .map-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .client-map {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .map-legend {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #666;
+        }
+        
+        .legend-star {
+            font-size: 1.5em;
+        }
+        
+        .legend-province {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #667eea;
+            border-radius: 3px;
+        }
+        
+        .legend-dot {
+            color: #35ADF3;
+            font-size: 1.5em;
+        }
+    </style>
 </head>
 <body>
     <!-- 导航栏 -->
@@ -220,36 +265,22 @@
                     <div class="section-content">
                         <p class="intro-text">智医科技的产品和服务已覆盖全国多个省份，服务超过 100 家医疗机构，其中包括众多三级甲等医院和区域医疗中心。</p>
                         
-                        <div class="client-grid">
-                            <div class="client-card">
-                                <div class="client-icon">🏥</div>
-                                <h4>福建医科大学附属第一医院</h4>
-                                <p>三级甲等 · 国家区域医疗中心</p>
+                        <div class="map-container">
+                            <img src="images/客户分布图.jpg" alt="智医科技服务客户分布图" class="client-map">
+                        </div>
+                        
+                        <div class="map-legend">
+                            <div class="legend-item">
+                                <span class="legend-star">⭐</span>
+                                <span>总部：福建</span>
                             </div>
-                            <div class="client-card">
-                                <div class="client-icon">🏥</div>
-                                <h4>贵州医科大学附属医院</h4>
-                                <p>三级甲等 · 省级重点医院</p>
+                            <div class="legend-item">
+                                <span class="legend-province">重点省份</span>
+                                <span>新疆、贵州、云南、湖北等</span>
                             </div>
-                            <div class="client-card">
-                                <div class="client-icon">🏥</div>
-                                <h4>十堰太和医院</h4>
-                                <p>三级甲等 · 区域性医疗中心</p>
-                            </div>
-                            <div class="client-card">
-                                <div class="client-icon">🏥</div>
-                                <h4>福建省立医院</h4>
-                                <p>三级甲等 · 省级综合医院</p>
-                            </div>
-                            <div class="client-card">
-                                <div class="client-icon">🏥</div>
-                                <h4>新疆医科大学附属第一医院</h4>
-                                <p>三级甲等 · 区域医疗中心</p>
-                            </div>
-                            <div class="client-card">
-                                <div class="client-icon">🏥</div>
-                                <h4>北京大学国际医院</h4>
-                                <p>三级甲等 · 国家级医疗中心</p>
+                            <div class="legend-item">
+                                <span class="legend-dot">●</span>
+                                <span>分支机构覆盖区域</span>
                             </div>
                         </div>
                     </div>
