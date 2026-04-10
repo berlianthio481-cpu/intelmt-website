@@ -3,64 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>就医全旅程解决方案 - 电子导引单</title>
+    <title>就医全旅程解决方案 - 电子导引单 | 智医科技</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
+        /* 页面专用样式 */
+        .solution-hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            padding: 160px 0 80px;
+            color: white;
+            margin-top: 72px;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        .header {
-            background: white;
-            border-radius: 20px;
-            padding: 60px 40px;
-            text-align: center;
-            margin-bottom: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-        }
-        
-        .header h1 {
+        .solution-hero h1 {
             font-size: 2.5em;
-            color: #667eea;
             margin-bottom: 20px;
         }
         
-        .header .subtitle {
+        .solution-hero .subtitle {
             font-size: 1.3em;
-            color: #666;
+            opacity: 0.95;
             max-width: 800px;
-            margin: 0 auto;
         }
         
-        .section {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        .solution-section {
+            padding: 80px 0;
         }
         
-        .section-title {
-            font-size: 1.8em;
-            color: #667eea;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #667eea;
+        .solution-section .container {
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2em;
+            color: var(--color-blue);
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            font-size: 1.1em;
+            color: #666;
         }
         
         .modules-grid {
@@ -74,6 +61,7 @@
             border-radius: 15px;
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
         
         .module-card:hover {
@@ -92,7 +80,7 @@
         }
         
         .module-content h3 {
-            color: #667eea;
+            color: var(--color-blue);
             margin-bottom: 15px;
             font-size: 1.4em;
         }
@@ -112,7 +100,7 @@
             content: "✓";
             position: absolute;
             left: 0;
-            color: #667eea;
+            color: var(--color-blue);
             font-weight: bold;
         }
         
@@ -127,14 +115,14 @@
             border-radius: 15px;
             padding: 30px;
             text-align: center;
-            border: 2px solid #667eea;
+            border: 2px solid var(--color-blue);
         }
         
         .feature-icon {
             width: 100px;
             height: 100px;
             margin: 0 auto 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--color-blue) 0%, #764ba2 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -144,7 +132,7 @@
         }
         
         .feature-card h3 {
-            color: #667eea;
+            color: var(--color-blue);
             margin-bottom: 15px;
         }
         
@@ -152,6 +140,10 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
         
         .value-table th,
@@ -163,7 +155,7 @@
         
         .value-table th {
             background: #f8f9ff;
-            color: #667eea;
+            color: var(--color-blue);
             font-weight: 600;
         }
         
@@ -184,26 +176,31 @@
             display: flex;
             align-items: center;
             gap: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         
         .client-icon {
             font-size: 2em;
         }
         
-        .footer {
+        .page-footer {
+            background: #f8f9ff;
+            padding: 60px 0 40px;
+            margin-top: 80px;
+        }
+        
+        .footer-content {
             text-align: center;
-            color: white;
-            padding: 30px;
-            opacity: 0.8;
+            color: #666;
+        }
+        
+        .footer-content p {
+            margin-bottom: 10px;
         }
         
         @media (max-width: 768px) {
-            .header h1 {
+            .solution-hero h1 {
                 font-size: 1.8em;
-            }
-            
-            .section {
-                padding: 25px;
             }
             
             .modules-grid,
@@ -214,19 +211,86 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
+    <!-- 全局导航 -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images/logo.png?v=20260328" alt="智医科技 Logo">
+                <div class="logo-subtitle">健康之路 HK2587 集团旗下子公司</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li class="nav-dropdown">
+                    <a href="solutions.html" class="active">解决方案</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="jyqlc.html">就医全旅程</a></li>
+                        <li><a href="solutions.html">患者管理</a></li>
+                        <li><a href="solutions.html">互联网医院</a></li>
+                        <li><a href="solutions.html">智慧服务评级</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="cases.html">客户案例</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="case-fyyy.html">福医附一医院</a></li>
+                        <li><a href="case-cxzrmyy.html">楚雄州人民医院</a></li>
+                        <li><a href="case-ssszhy.html">石狮市总医院</a></li>
+                        <li><a href="case-pkuih.html">北京大学国际医院</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="insights.html">行业观察</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="insights.html">智医观点</a></li>
+                        <li><a href="insights.html">医疗与互联网</a></li>
+                        <li><a href="insights.html">医事双人说</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="co-build.html">合作伙伴</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="co-build.html">渠道</a></li>
+                        <li><a href="co-build.html">投资人</a></li>
+                        <li><a href="co-build.html">员工</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="about.html">关于我们</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">公司简介</a></li>
+                        <li><a href="about.html">联系我们</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-contact">
+                <a href="#contact" class="btn-contact">联系我们</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面头部 -->
+    <section class="solution-hero">
+        <div class="container">
             <h1>🏥 就医全旅程解决方案</h1>
             <p class="subtitle">电子导引单 —— 将医院诊前、诊中、诊后的就医全流程节点进行串联并提供智能导医服务，实现患者就医从"人找服务"到"服务找人"的转变</p>
         </div>
-        
-        <!-- 核心模块 -->
-        <div class="section">
-            <h2 class="section-title">📦 核心模块</h2>
+    </section>
+
+    <!-- 核心模块 -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>📦 核心模块</h2>
+                <p>三大就医场景全覆盖</p>
+            </div>
             <div class="modules-grid">
                 <div class="module-card">
-                    <img src="./images/门诊.jpg" alt="门诊全旅程" class="module-image">
+                    <img src="images/门诊.jpg" alt="门诊全旅程" class="module-image">
                     <div class="module-content">
                         <h3>🚪 门诊全旅程</h3>
                         <ul>
@@ -238,7 +302,7 @@
                 </div>
                 
                 <div class="module-card">
-                    <img src="./images/住院.jpg" alt="住院全旅程" class="module-image">
+                    <img src="images/住院.jpg" alt="住院全旅程" class="module-image">
                     <div class="module-content">
                         <h3>🏨 住院全旅程</h3>
                         <ul>
@@ -250,7 +314,7 @@
                 </div>
                 
                 <div class="module-card">
-                    <img src="./images/体检.jpg" alt="体检全旅程" class="module-image">
+                    <img src="images/体检.jpg" alt="体检全旅程" class="module-image">
                     <div class="module-content">
                         <h3>📋 体检全旅程</h3>
                         <ul>
@@ -262,10 +326,15 @@
                 </div>
             </div>
         </div>
-        
-        <!-- 特色亮点 -->
-        <div class="section">
-            <h2 class="section-title">✨ 特色亮点</h2>
+    </section>
+
+    <!-- 特色亮点 -->
+    <section class="solution-section" style="background: #f8f9ff;">
+        <div class="container">
+            <div class="section-header">
+                <h2>✨ 特色亮点</h2>
+                <p>三大核心优势</p>
+            </div>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
@@ -286,10 +355,15 @@
                 </div>
             </div>
         </div>
-        
-        <!-- 创造价值 -->
-        <div class="section">
-            <h2 class="section-title">💎 创造价值</h2>
+    </section>
+
+    <!-- 创造价值 -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>💎 创造价值</h2>
+                <p>可量化的服务提升</p>
+            </div>
             <table class="value-table">
                 <thead>
                     <tr>
@@ -313,10 +387,15 @@
                 </tbody>
             </table>
         </div>
-        
-        <!-- 客户声音 -->
-        <div class="section">
-            <h2 class="section-title">🏥 客户声音</h2>
+    </section>
+
+    <!-- 客户声音 -->
+    <section class="solution-section" style="background: #f8f9ff;">
+        <div class="container">
+            <div class="section-header">
+                <h2>🏥 客户声音</h2>
+                <p>已服务医院</p>
+            </div>
             <div class="clients-list">
                 <div class="client-item">
                     <span class="client-icon">🏥</span>
@@ -340,10 +419,13 @@
                 </div>
             </div>
         </div>
-        
-        <div class="footer">
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="page-footer">
+        <div class="container footer-content">
             <p>© 2026 健康之路 · 智医科技 | 就医全旅程解决方案</p>
         </div>
-    </div>
+    </footer>
 </body>
 </html>
