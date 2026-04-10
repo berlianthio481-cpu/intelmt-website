@@ -77,9 +77,68 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         
+        .hero-right-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .culture-hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            min-width: 350px;
+        }
+        
+        .culture-hero-item {
+            text-align: center;
+            color: white;
+        }
+        
+        .culture-hero-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .culture-hero-label {
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+        
+        .culture-hero-text {
+            font-size: 0.95em;
+            line-height: 1.5;
+            opacity: 0.85;
+        }
+        
+        .case-hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
         @media (max-width: 768px) {
             .company-intro-layout {
                 grid-template-columns: 1fr;
+            }
+            
+            .case-hero-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-right-content {
+                justify-content: flex-start;
+            }
+            
+            .culture-hero-grid {
+                min-width: auto;
             }
         }
     </style>
@@ -155,43 +214,24 @@
                     <h1>关于我们</h1>
                     <p class="subtitle">全国领先的患者服务数智化解决方案提供商</p>
                 </div>
-                <div class="case-hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <div class="stat-content">
-                            <span class="stat-label">成立时间</span>
-                            <span class="stat-value">2016 年</span>
-                        </div>
+            </div>
+            <!-- 右侧企业文化 -->
+            <div class="hero-right-content">
+                <div class="culture-hero-grid">
+                    <div class="culture-hero-item">
+                        <div class="culture-hero-icon">🎯</div>
+                        <div class="culture-hero-label">使命</div>
+                        <div class="culture-hero-text">为患者解忧，让医院更智慧</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <div class="stat-content">
-                            <span class="stat-label">服务客户</span>
-                            <span class="stat-value">100+ 家医院</span>
-                        </div>
+                    <div class="culture-hero-item">
+                        <div class="culture-hero-icon">👁️</div>
+                        <div class="culture-hero-label">愿景</div>
+                        <div class="culture-hero-text">全国领先的患者服务全面解决方案专家</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
-                                <path d="M3 9H21M9 21V9" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <div class="stat-content">
-                            <span class="stat-label">所在地区</span>
-                            <span class="stat-value">福建·福州</span>
-                        </div>
+                    <div class="culture-hero-item">
+                        <div class="culture-hero-icon">💎</div>
+                        <div class="culture-hero-label">价值观</div>
+                        <div class="culture-hero-text">价值导向、合作共赢、敬业守信、勇于挑战</div>
                     </div>
                 </div>
             </div>
