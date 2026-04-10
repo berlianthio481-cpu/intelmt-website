@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>就医全旅程解决方案 - 电子导引单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .module-card {
+            background: #f8f9ff;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+        }
+        
+        .module-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .module-content {
+            padding: 25px;
+        }
+        
+        .module-content h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .module-content ul {
+            list-style: none;
+            color: #666;
+        }
+        
+        .module-content li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .module-content li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #667eea;
+        }
+        
+        .feature-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5em;
+            color: white;
+        }
+        
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .value-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .value-table th,
+        .value-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 2px solid #e8eaff;
+        }
+        
+        .value-table th {
+            background: #f8f9ff;
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .value-table tr:hover {
+            background: #f8f9ff;
+        }
+        
+        .clients-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .client-item {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .client-icon {
+            font-size: 2em;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+            
+            .modules-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🏥 就医全旅程解决方案</h1>
+            <p class="subtitle">电子导引单 —— 将医院诊前、诊中、诊后的就医全流程节点进行串联并提供智能导医服务，实现患者就医从"人找服务"到"服务找人"的转变</p>
+        </div>
+        
+        <!-- 核心模块 -->
+        <div class="section">
+            <h2 class="section-title">📦 核心模块</h2>
+            <div class="modules-grid">
+                <div class="module-card">
+                    <img src="./images/门诊.jpg" alt="门诊全旅程" class="module-image">
+                    <div class="module-content">
+                        <h3>🚪 门诊全旅程</h3>
+                        <ul>
+                            <li><strong>诊前：</strong>预约挂号、智能分诊、就诊提醒</li>
+                            <li><strong>诊中：</strong>报到候诊、检查引导、缴费取药</li>
+                            <li><strong>诊后：</strong>报告查询、复诊预约、健康随访</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="module-card">
+                    <img src="./images/住院.jpg" alt="住院全旅程" class="module-image">
+                    <div class="module-content">
+                        <h3>🏨 住院全旅程</h3>
+                        <ul>
+                            <li><strong>入院：</strong>床位预约、入院办理、须知告知</li>
+                            <li><strong>在院：</strong>每日清单、检查安排、费用查询</li>
+                            <li><strong>出院：</strong>出院结算、带药指导、随访计划</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="module-card">
+                    <img src="./images/体检.jpg" alt="体检全旅程" class="module-image">
+                    <div class="module-content">
+                        <h3>📋 体检全旅程</h3>
+                        <ul>
+                            <li><strong>检前：</strong>套餐选择、预约登记、注意事项</li>
+                            <li><strong>检中：</strong>科室导航、排队提醒、进度查询</li>
+                            <li><strong>检后：</strong>报告解读、异常提醒、健康管理</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 特色亮点 -->
+        <div class="section">
+            <h2 class="section-title">✨ 特色亮点</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>扫码即服务</h3>
+                    <p>患者只需扫描电子导引单二维码，即可获取全流程就医指引，无需下载 APP，即用即走</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI 智能</h3>
+                    <p>7×24 小时智能导医，AI 智能问答随时解答就医疑问，智能分诊精准推荐科室</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👩‍</div>
+                    <h3>客服辅助</h3>
+                    <p>人机协同服务升级，AI 无法解决的问题无缝转人工，专业客服团队在线支持</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 创造价值 -->
+        <div class="section">
+            <h2 class="section-title">💎 创造价值</h2>
+            <table class="value-table">
+                <thead>
+                    <tr>
+                        <th>价值维度</th>
+                        <th>提升效果</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>⏱️ 就医时长</td>
+                        <td>显著缩短患者等待时间</td>
+                    </tr>
+                    <tr>
+                        <td>😊 满意度</td>
+                        <td>大幅提升患者就医体验</td>
+                    </tr>
+                    <tr>
+                        <td>📊 模块使用率</td>
+                        <td>提高医院服务模块活跃度</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 客户声音 -->
+        <div class="section">
+            <h2 class="section-title">🏥 客户声音</h2>
+            <div class="clients-list">
+                <div class="client-item">
+                    <span class="client-icon">🏥</span>
+                    <span>福建医科大学附属第一医院</span>
+                </div>
+                <div class="client-item">
+                    <span class="client-icon">🏥</span>
+                    <span>贵州医科大学附属医院</span>
+                </div>
+                <div class="client-item">
+                    <span class="client-icon">🏥</span>
+                    <span>十堰太和医院</span>
+                </div>
+                <div class="client-item">
+                    <span class="client-icon">🏥</span>
+                    <span>福建省立医院</span>
+                </div>
+                <div class="client-item">
+                    <span class="client-icon">🏥</span>
+                    <span>新疆医科大学附属第一医院</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 健康之路 · 智医科技 | 就医全旅程解决方案</p>
+        </div>
+    </div>
+</body>
+</html>
