@@ -12,304 +12,69 @@
             min-height: 100vh;
             padding: 20px;
         }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
-        }
-        .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: #fff;
-            padding: 30px;
-            text-align: center;
-        }
+        .container { max-width: 1000px; margin: 0 auto; background: #fff; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: #fff; padding: 30px; text-align: center; }
         .header h1 { font-size: 28px; margin-bottom: 15px; font-weight: 600; }
-        .header .meta {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            font-size: 14px;
-            opacity: 0.9;
-        }
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 10px;
-            padding: 25px;
-            background: #f8f9fa;
-            border-bottom: 1px solid #e9ecef;
-        }
-        .stat-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 15px 10px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
+        .header .meta { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; font-size: 14px; opacity: 0.9; }
+        .stats { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; padding: 25px; background: #f8f9fa; border-bottom: 1px solid #e9ecef; }
+        .stat-card { background: #fff; border-radius: 12px; padding: 15px 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
         .stat-card .number { font-size: 28px; font-weight: 700; color: #1e3c72; }
         .stat-card .label { font-size: 12px; color: #6c757d; }
         .section { padding: 25px 30px; border-bottom: 1px solid #e9ecef; }
-        .section-title {
-            font-size: 20px;
-            color: #1e3c72;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #667eea;
-        }
-        .section-title .badge {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-        }
-        .section-title .actions {
-            font-size: 13px;
-        }
-        .section-title .actions a {
-            color: #667eea;
-            cursor: pointer;
-            margin-left: 15px;
-            text-decoration: none;
-        }
-        .section-title .actions a:hover { text-decoration: underline; }
-        
-        /* Accordion Item */
-        .accordion-item {
-            border: 1px solid #e9ecef;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            overflow: hidden;
-            background: #fff;
-            transition: all 0.3s ease;
-        }
-        .accordion-item:hover {
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .accordion-item.active {
-            border-color: #667eea;
-            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.2);
-        }
-        .accordion-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 18px;
-            cursor: pointer;
-            background: #f8f9fa;
-            user-select: none;
-        }
-        .accordion-header:hover {
-            background: #e9ecef;
-        }
-        .accordion-item.active .accordion-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
-        }
-        .accordion-title {
-            flex: 1;
-            font-size: 16px;
-            font-weight: 600;
-            color: #212529;
-            margin-right: 15px;
-        }
-        .accordion-item.active .accordion-title {
-            color: #fff;
-        }
-        .accordion-icon {
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            transition: transform 0.3s ease;
-            flex-shrink: 0;
-        }
-        .accordion-item.active .accordion-icon {
-            transform: rotate(180deg);
-        }
-        .accordion-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            padding: 0 18px 18px 18px;
-            font-size: 13px;
-            color: #6c757d;
-        }
-        .accordion-item.active .accordion-meta {
-            color: rgba(255,255,255,0.9);
-        }
-        .accordion-meta span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .accordion-meta .tag {
-            background: #e9ecef;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-        }
-        .accordion-item.active .accordion-meta .tag {
-            background: rgba(255,255,255,0.2);
-            color: #fff;
-        }
-        .accordion-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            padding: 4px 12px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 20px;
-            font-size: 12px;
-            white-space: nowrap;
-            margin-left: 10px;
-        }
-        .accordion-item.active .accordion-link {
-            background: #fff;
-            color: #667eea;
-        }
-        
-        /* Accordion Content */
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            background: #fff;
-        }
-        .accordion-item.active .accordion-content {
-            max-height: 2000px;
-        }
-        .content-inner {
-            padding: 20px;
-            border-top: 1px solid #e9ecef;
-        }
-        .detail-section {
-            background: #f8f9fa;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 15px;
-        }
-        .detail-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
-        }
-        .detail-item {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-        .detail-label {
-            font-size: 12px;
-            color: #6c757d;
-            font-weight: 500;
-        }
-        .detail-value {
-            font-size: 14px;
-            color: #212529;
-            font-weight: 600;
-        }
-        .detail-title {
-            font-size: 16px;
-            color: #1e3c72;
-            margin: 20px 0 12px 0;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #667eea;
-            font-weight: 600;
-        }
-        .detail-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        .detail-list li {
-            padding: 8px 0;
-            padding-left: 20px;
-            position: relative;
-            color: #333;
-            line-height: 1.6;
-        }
-        .detail-list li:before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-        }
-        .detail-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        .detail-table th,
-        .detail-table td {
-            border: 1px solid #e9ecef;
-            padding: 10px;
-            text-align: left;
-            font-size: 13px;
-        }
-        .detail-table th {
-            background: #f8f9fa;
-            font-weight: 600;
-            color: #1e3c72;
-        }
-        .contact-info {
-            background: #e8f4f8;
-            border-radius: 8px;
-            padding: 15px;
-            margin-top: 15px;
-        }
-        .contact-info p {
-            margin-bottom: 8px;
-            font-size: 14px;
-            color: #333;
-        }
-        .contact-info strong {
-            color: #1e3c72;
-        }
-        
-        .footer {
-            background: #f8f9fa;
-            padding: 20px 30px;
-            text-align: center;
-            font-size: 13px;
-            color: #6c757d;
-        }
+        .section-title { font-size: 20px; color: #1e3c72; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; padding-bottom: 10px; border-bottom: 2px solid #667eea; }
+        .section-title .badge { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; padding: 3px 10px; border-radius: 20px; font-size: 12px; }
+        .section-title .actions { font-size: 13px; }
+        .section-title .actions a { color: #667eea; cursor: pointer; margin-left: 15px; text-decoration: none; }
+        .accordion-item { border: 1px solid #e9ecef; border-radius: 10px; margin-bottom: 15px; overflow: hidden; background: #fff; }
+        .accordion-header { display: flex; justify-content: space-between; align-items: flex-start; padding: 18px; cursor: pointer; background: #f8f9fa; user-select: none; }
+        .accordion-header:hover { background: #e9ecef; }
+        .accordion-item.active .accordion-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; }
+        .accordion-title { flex: 1; font-size: 16px; font-weight: 600; color: #212529; margin-right: 15px; }
+        .accordion-item.active .accordion-title { color: #fff; }
+        .accordion-icon { width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: transform 0.3s ease; flex-shrink: 0; }
+        .accordion-item.active .accordion-icon { transform: rotate(180deg); }
+        .accordion-meta { display: flex; flex-wrap: wrap; gap: 15px; padding: 0 18px 18px 18px; font-size: 13px; color: #6c757d; }
+        .accordion-item.active .accordion-meta { color: rgba(255,255,255,0.9); }
+        .accordion-meta span { display: flex; align-items: center; gap: 5px; }
+        .accordion-meta .tag { background: #e9ecef; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+        .accordion-item.active .accordion-meta .tag { background: rgba(255,255,255,0.2); color: #fff; }
+        .accordion-link { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; text-decoration: none; border-radius: 20px; font-size: 12px; white-space: nowrap; margin-left: 10px; }
+        .accordion-item.active .accordion-link { background: #fff; color: #667eea; }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #fff; }
+        .accordion-item.active .accordion-content { max-height: 5000px; }
+        .content-inner { padding: 25px; border-top: 1px solid #e9ecef; }
+        .detail-section { background: #f8f9fa; border-radius: 8px; padding: 15px; margin-bottom: 20px; }
+        .detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+        .detail-item { display: flex; flex-direction: column; gap: 4px; }
+        .detail-label { font-size: 12px; color: #6c757d; font-weight: 500; }
+        .detail-value { font-size: 14px; color: #212529; font-weight: 600; }
+        .detail-title { font-size: 16px; color: #1e3c72; margin: 25px 0 12px 0; padding-bottom: 8px; border-bottom: 2px solid #667eea; font-weight: 600; }
+        .detail-content { line-height: 1.8; color: #333; font-size: 14px; }
+        .detail-content p { margin-bottom: 12px; }
+        .detail-content strong { color: #1e3c72; }
+        .detail-list { list-style: none; padding-left: 0; margin: 15px 0; }
+        .detail-list li { padding: 8px 0; padding-left: 20px; position: relative; color: #333; line-height: 1.6; }
+        .detail-list li:before { content: "▸"; position: absolute; left: 0; color: #667eea; font-weight: bold; }
+        .detail-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .detail-table th, .detail-table td { border: 1px solid #e9ecef; padding: 10px; text-align: left; font-size: 13px; }
+        .detail-table th { background: #f8f9fa; font-weight: 600; color: #1e3c72; }
+        .contact-info { background: #e8f4f8; border-radius: 8px; padding: 15px; margin-top: 20px; }
+        .contact-info p { margin-bottom: 8px; font-size: 14px; color: #333; }
+        .contact-info strong { color: #1e3c72; }
+        .attachment-box { background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 15px; margin-top: 15px; }
+        .attachment-box p { color: #f57c00; font-weight: 600; }
+        .footer { background: #f8f9fa; padding: 20px 30px; text-align: center; font-size: 13px; color: #6c757d; }
         .footer a { color: #667eea; text-decoration: none; }
-        
-        @media (max-width: 768px) {
-            .stats { grid-template-columns: repeat(4, 1fr); }
-            .section { padding: 20px 15px; }
-            .accordion-header { flex-direction: column; gap: 10px; }
-            .accordion-link { margin-left: 0; margin-top: 10px; }
-        }
-        @media (max-width: 480px) {
-            .stats { grid-template-columns: repeat(2, 1fr); }
-            .header h1 { font-size: 22px; }
-        }
+        @media (max-width: 768px) { .stats { grid-template-columns: repeat(4, 1fr); } .section { padding: 20px 15px; } .accordion-header { flex-direction: column; gap: 10px; } .accordion-link { margin-left: 0; margin-top: 10px; } }
+        @media (max-width: 480px) { .stats { grid-template-columns: repeat(2, 1fr); } .header h1 { font-size: 22px; } }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>📋 采招网招投标信息简报</h1>
-            <div class="meta">
-                <span>📅 2026-05-07 13:10</span>
-                <span>📧 163 邮箱推送</span>
-                <span>🔑 互联网医院、智慧医院、医院信息化</span>
-            </div>
+            <div class="meta"><span>📅 2026-05-07 13:10</span><span>📧 163 邮箱推送</span><span>🔑 互联网医院、智慧医院、医院信息化</span></div>
         </div>
-        
         <div class="stats">
             <div class="stat-card"><div class="number">68</div><div class="label">总计条目</div></div>
             <div class="stat-card"><div class="number">14</div><div class="label">招标公告</div></div>
@@ -321,13 +86,7 @@
         </div>
         
         <div class="section">
-            <div class="section-title">
-                📢 招标公告 <span class="badge">14 条</span>
-                <span class="actions">
-                    <a onclick="expandAll('announcement')">全部展开</a>
-                    <a onclick="collapseAll('announcement')">全部收起</a>
-                </span>
-            </div>
+            <div class="section-title">📢 招标公告 <span class="badge">14 条</span><span class="actions"><a onclick="expandAll(event)">全部展开</a><a onclick="collapseAll(event)">全部收起</a></span></div>
             
             <div class="accordion-item" id="item-1">
                 <div class="accordion-header" onclick="toggleItem('item-1')">
@@ -335,39 +94,85 @@
                     <div class="accordion-icon">▼</div>
                 </div>
                 <div class="accordion-meta">
-                    <span>📍 新疆</span>
-                    <span>💰 预算：360,000 元</span>
-                    <span>⏰ 截止：2026-06-01 11:00</span>
-                    <span class="tag">公开招标</span>
+                    <span>📍 新疆</span><span>💰 预算：360,000 元</span><span>⏰ 截止：2026-06-01 11:00</span><span class="tag">公开招标</span>
                     <a href="https://www.bidcenter.com.cn/news-417517714-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
                 </div>
                 <div class="accordion-content">
                     <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">SJX-2025-652-02</span></div>
-                                <div class="detail-item"><span class="detail-label">采购方式</span><span class="detail-value">公开招标</span></div>
-                                <div class="detail-item"><span class="detail-label">预算金额</span><span class="detail-value">360,000 元</span></div>
-                                <div class="detail-item"><span class="detail-label">最高限价</span><span class="detail-value">198,000 元</span></div>
-                                <div class="detail-item"><span class="detail-label">采购数量</span><span class="detail-value">2 套</span></div>
-                                <div class="detail-item"><span class="detail-label">履约期限</span><span class="detail-value">合同签订后 30 天内</span></div>
+                        <div class="detail-section"><div class="detail-grid">
+                            <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">SJX-2025-652-02</span></div>
+                            <div class="detail-item"><span class="detail-label">采购方式</span><span class="detail-value">公开招标</span></div>
+                            <div class="detail-item"><span class="detail-label">预算金额</span><span class="detail-value">360,000 元</span></div>
+                            <div class="detail-item"><span class="detail-label">最高限价</span><span class="detail-value">198,000 元</span></div>
+                            <div class="detail-item"><span class="detail-label">采购数量</span><span class="detail-value">2 套</span></div>
+                            <div class="detail-item"><span class="detail-label">履约期限</span><span class="detail-value">合同签订后 30 天内</span></div>
+                        </div></div>
+                        <div class="detail-content">
+                            <h4 class="detail-title">一、项目基本情况</h4>
+                            <p><strong>项目编号：</strong>SJX-2025-652-02</p>
+                            <p><strong>项目名称：</strong>新疆医科大学第一附属医院牙科显微镜采购项目（二次）</p>
+                            <p><strong>采购方式：</strong>公开招标</p>
+                            <p><strong>预算金额：</strong>360,000 元</p>
+                            <p><strong>最高限价：</strong>198,000 元</p>
+                            <p><strong>采购需求：</strong>标项名称：新疆医科大学第一附属医院牙科显微镜采购项目（二次），数量：2，预算金额：360,000 元，单位：套，简要规格描述：牙科显微镜采购，详见本项目采购需求。</p>
+                            <p><strong>本项目（否）接受联合体投标：</strong>否</p>
+                            
+                            <h4 class="detail-title">二、申请人的资格要求</h4>
+                            <ul class="detail-list">
+                                <li>满足《中华人民共和国政府采购法》第二十二条规定；</li>
+                                <li>落实政府采购政策需满足的资格要求：标项 1：本项目专门面向中小企业采购；</li>
+                                <li>本项目的特定资格要求：【标项 1】投标人具有医疗器械经营资格，属于医疗器械管理的产品需根据《医疗器械监督管理条例》(国务院令第 650 号) 有关内容办理医疗器产品注册或备案。</li>
+                            </ul>
+                            
+                            <h4 class="detail-title">三、获取招标文件</h4>
+                            <p><strong>时间：</strong>2026 年 05 月 07 日至 2026 年 05 月 13 日，每天上午 00:00 至 14:00，下午 14:00 至 23:59（北京时间，法定节假日除外）</p>
+                            <p><strong>地点：</strong>政采云平台线上</p>
+                            <p><strong>方式：</strong>供应商登录政采云平台 https://www.zcygov.cn/ 在线申请获取采购文件（进入"项目采购"应用，在获取采购文件菜单中选择项目，申请获取采购文件），或者点击采购公告底部潜在供应商"获取采购文件"，页面跳转后登陆，直接获取采购文件。</p>
+                            <p><strong>售价：</strong>0 元</p>
+                            
+                            <h4 class="detail-title">四、提交投标文件截止时间、开标时间和地点</h4>
+                            <p><strong>截止时间：</strong>2026 年 06 月 01 日 11:00（北京时间）</p>
+                            <p><strong>投标地点：</strong>请登录政采云投标客户端投标</p>
+                            <p><strong>开标时间：</strong>2026 年 06 月 01 日 11:00（北京时间）</p>
+                            <p><strong>开标地点：</strong>投标人登录政采云平台 https://www.zcygov.cn/，进入"项目采购 - 开标评标 - 右边选择对应项目点击"进入项目"进入开标大厅。</p>
+                            
+                            <h4 class="detail-title">五、公告期限</h4>
+                            <p>自本公告发布之日起 5 个工作日。</p>
+                            
+                            <h4 class="detail-title">六、其他补充事宜</h4>
+                            <p>1、本项目实行网上投标，采用电子投标文件。</p>
+                            <p>2、各供应商应在开标前确保成为正式注册入库供应商，并完成 CA 数字证书 (符合国密标准) 申领。因未注册入库、未办理 CA 数字证书等原因造成无法投标或投标失败等后果由供应商自行承担。如需咨询，请联系新疆 - 安信 CA 服务热线 0991-7810912；翔晟 CA 服务热线 025-66085508；新疆 CA 服务热线 4000921999。</p>
+                            <p>3、供应商将政采云电子交易客户端下载、安装完成后，可通过账号密码或 CA 登录客户端进行投标文件的制作。在使用政采云投标客户端时，建议使用 WIN7 及以上操作系统。</p>
+                            <p>4、其他事项：①关于本项目所有公告、公示在新疆政府采购网发布。②请投标单位随时关注本项目的澄清、答疑、变更事项。③本项目实行电子招投标，供应商须登录政采云平台申请获取招标文件，并通过政采云电子投标客户端制作响应文件，同时自行承担与投标有关的一切费用。④各供应商应在开标前确保成为新疆政府采购网正式注册入库供应商，并完成 CA 数字证书申领。因未注册入库、未办理 CA 数字证书等原因造成无法投标或投标失败等后果由供应商自行承担。⑤有意向参与电子开评标的供应商，可访问新疆数字证书认证中心官方网站（https://www.xjca.com.cn/）或下载"新疆政务通"APP 自行进行申领。如需咨询，请联系新疆 CA 服务热线 0991-2819290。</p>
+                            
+                            <h4 class="detail-title">特别提示</h4>
+                            <ul class="detail-list">
+                                <li>1、采购限额标准以上，200 万元以下的货物和服务采购项目、400 万元以下的工程采购项目，适宜由中小企业提供的，采购人应当专门面向中小企业采购。</li>
+                                <li>2、超过 200 万元的货物和服务采购项目，预留该部分采购项目预算总额的 30% 以上专门面向中小企业采购，其中预留给小微企业的比例不低于 60%。</li>
+                                <li>3、超过 400 万元的工程采购项目中适宜由中小企业提供的，预留该部分采购项目预算总额的 40% 以上专门面向中小企业采购，其中预留给小微企业的比例不低于 60%。</li>
+                                <li>4、对于未预留份额专门面向中小企业的采购项目，以及预留份额项目中的非预留部分采购包，采购人、采购代理机构应当对符合规定的小微企业报价给予 10%~20%（工程项目为 3%~5%）的扣除，用扣除后的价格参加评审。</li>
+                                <li>5、接受大中型企业与小微企业组成联合体或者允许大中型企业向一家或者多家小微企业分包的采购项目，对于联合协议或者分包意向协议约定小微企业的合同份额占到合同总金额 30% 以上的，采购人、采购代理机构应当对联合体或者大中型企业的报价给予 4%~6%（工程项目为 1%~2%）的扣除，用扣除后的价格参加评审。</li>
+                            </ul>
+                            
+                            <h4 class="detail-title">七、对本次采购提出询问，请按以下方式联系</h4>
+                            <div class="contact-info">
+                                <p><strong>1. 采购人信息</strong></p>
+                                <p>名 称：新疆医科大学第一附属医院</p>
+                                <p>地 址：乌鲁木齐鲤鱼山南路 137 号</p>
+                                <p>联系方式：0991-4362697</p>
+                                <p><strong>2. 采购代理机构信息</strong></p>
+                                <p>名 称：新疆世纪星工程咨询有限公司</p>
+                                <p>地 址：乌鲁木齐经济技术开发区二期黄山街一品九点阳光德港大厦 B 座 20 楼</p>
+                                <p>联系方式：0991-3678303</p>
+                                <p><strong>3. 项目联系方式</strong></p>
+                                <p>项目联系人：毛文静、郑倩如、訾王贝</p>
+                                <p>电 话：0991-3678303</p>
                             </div>
-                        </div>
-                        <div class="detail-title">申请人资格要求</div>
-                        <ul class="detail-list">
-                            <li>满足《中华人民共和国政府采购法》第二十二条规定</li>
-                            <li>本项目专门面向中小企业采购</li>
-                            <li>投标人具有医疗器械经营资格</li>
-                        </ul>
-                        <div class="detail-title">招标文件获取</div>
-                        <p>时间：2026 年 05 月 07 日至 2026 年 05 月 13 日</p>
-                        <p>地点：政采云平台线上 https://www.zcygov.cn/</p>
-                        <div class="detail-title">投标文件递交</div>
-                        <p>截止时间：2026 年 06 月 01 日 11:00（北京时间）</p>
-                        <p>开标地点：政采云平台电子开标大厅</p>
-                        <div class="contact-info">
-                            <p><strong>采购人：</strong>新疆医科大学第一附属医院 0991-4362697</p>
-                            <p><strong>代理机构：</strong>新疆世纪星工程咨询有限公司 0991-3678303</p>
+                            
+                            <div class="attachment-box">
+                                <p>📎 附件信息</p>
+                                <p>（发售版）招标文件新疆医科大学第一附属医院牙科显微镜采购项目（二次）.docx（730.3K）</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -379,31 +184,70 @@
                     <div class="accordion-icon">▼</div>
                 </div>
                 <div class="accordion-meta">
-                    <span>📍 新疆</span>
-                    <span>💰 预算：240,000 元</span>
-                    <span>⏰ 截止：2026-06-01 11:00</span>
-                    <span class="tag">公开招标</span>
+                    <span>📍 新疆</span><span>💰 预算：240,000 元</span><span>⏰ 截止：2026-06-01 11:00</span><span class="tag">公开招标</span>
                     <a href="https://www.bidcenter.com.cn/news-417517696-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
                 </div>
                 <div class="accordion-content">
                     <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">SJX-2025-721-02</span></div>
-                                <div class="detail-item"><span class="detail-label">采购方式</span><span class="detail-value">公开招标</span></div>
-                                <div class="detail-item"><span class="detail-label">预算金额</span><span class="detail-value">240,000 元</span></div>
-                                <div class="detail-item"><span class="detail-label">最高限价</span><span class="detail-value">220,000 元</span></div>
-                                <div class="detail-item"><span class="detail-label">采购数量</span><span class="detail-value">2 套</span></div>
+                        <div class="detail-section"><div class="detail-grid">
+                            <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">SJX-2025-721-02</span></div>
+                            <div class="detail-item"><span class="detail-label">采购方式</span><span class="detail-value">公开招标</span></div>
+                            <div class="detail-item"><span class="detail-label">预算金额</span><span class="detail-value">240,000 元</span></div>
+                            <div class="detail-item"><span class="detail-label">最高限价</span><span class="detail-value">220,000 元</span></div>
+                            <div class="detail-item"><span class="detail-label">采购数量</span><span class="detail-value">2 套</span></div>
+                        </div></div>
+                        <div class="detail-content">
+                            <h4 class="detail-title">一、项目基本情况</h4>
+                            <p><strong>项目编号：</strong>SJX-2025-721-02</p>
+                            <p><strong>项目名称：</strong>新疆医科大学第一附属医院牙科治疗椅采购项目（二次）</p>
+                            <p><strong>采购方式：</strong>公开招标</p>
+                            <p><strong>预算金额：</strong>240,000 元</p>
+                            <p><strong>最高限价：</strong>220,000 元</p>
+                            <p><strong>采购需求：</strong>标项名称：新疆医科大学第一附属医院牙科治疗椅采购项目（二次），数量：2，预算金额：240,000 元，单位：套，简要规格描述：牙科治疗椅采购，详见本项目采购需求。</p>
+                            <p><strong>合同履行期限：</strong>自合同签订之日起 30 天内，将标的物运送至甲方指定地点，并负责完成安装调试，配合甲方完成验收。</p>
+                            <p><strong>本项目（否）接受联合体投标：</strong>否</p>
+                            
+                            <h4 class="detail-title">二、申请人的资格要求</h4>
+                            <ul class="detail-list">
+                                <li>满足《中华人民共和国政府采购法》第二十二条规定；</li>
+                                <li>落实政府采购政策需满足的资格要求：标项 1：本项目专门面向中小企业采购；</li>
+                                <li>本项目的特定资格要求：【标项 1】投标人具有医疗器械经营资格，属于医疗器械管理的产品需根据《医疗器械监督管理条例》(国务院令第 650 号) 有关内容办理医疗器产品注册或备案。</li>
+                            </ul>
+                            
+                            <h4 class="detail-title">三、获取招标文件</h4>
+                            <p><strong>时间：</strong>2026 年 05 月 07 日至 2026 年 05 月 13 日，每天上午 00:00 至 14:00，下午 14:00 至 23:59（北京时间，法定节假日除外）</p>
+                            <p><strong>地点：</strong>政采云平台线上</p>
+                            <p><strong>方式：</strong>供应商登录政采云平台 https://www.zcygov.cn/ 在线申请获取采购文件。</p>
+                            <p><strong>售价：</strong>0 元</p>
+                            
+                            <h4 class="detail-title">四、提交投标文件截止时间、开标时间和地点</h4>
+                            <p><strong>截止时间：</strong>2026 年 06 月 01 日 11:00（北京时间）</p>
+                            <p><strong>投标地点：</strong>请登录政采云投标客户端投标</p>
+                            <p><strong>开标时间：</strong>2026 年 06 月 01 日 11:00（北京时间）</p>
+                            <p><strong>开标地点：</strong>投标人登录政采云平台 https://www.zcygov.cn/，进入"项目采购 - 开标评标"进入开标大厅。</p>
+                            
+                            <h4 class="detail-title">五、公告期限</h4>
+                            <p>自本公告发布之日起 5 个工作日。</p>
+                            
+                            <h4 class="detail-title">六、对本次采购提出询问，请按以下方式联系</h4>
+                            <div class="contact-info">
+                                <p><strong>1. 采购人信息</strong></p>
+                                <p>名 称：新疆医科大学第一附属医院</p>
+                                <p>地 址：乌鲁木齐市新市区鲤鱼山南路 137 号</p>
+                                <p>联系方式：0991-4362391</p>
+                                <p><strong>2. 采购代理机构信息</strong></p>
+                                <p>名 称：新疆世纪星工程咨询有限公司</p>
+                                <p>地 址：乌鲁木齐经济技术开发区二期黄山街一品九点阳光德港大厦 B 座 20 楼</p>
+                                <p>联系方式：0991-3678303</p>
+                                <p><strong>3. 项目联系方式</strong></p>
+                                <p>项目联系人：毛文静、郑倩如、訾王贝</p>
+                                <p>电 话：0991-3678303</p>
                             </div>
-                        </div>
-                        <div class="detail-title">申请人资格要求</div>
-                        <ul class="detail-list">
-                            <li>满足《中华人民共和国政府采购法》第二十二条规定</li>
-                            <li>本项目专门面向中小企业采购</li>
-                            <li>投标人具有医疗器械经营资格</li>
-                        </ul>
-                        <div class="contact-info">
-                            <p><strong>采购人：</strong>新疆医科大学第一附属医院 0991-4362391</p>
+                            
+                            <div class="attachment-box">
+                                <p>📎 附件信息</p>
+                                <p>（发售版）招标文件 - 新疆医科大学第一附属医院牙科治疗椅采购项目（二次）.docx（741.3K）</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -415,699 +259,48 @@
                     <div class="accordion-icon">▼</div>
                 </div>
                 <div class="accordion-meta">
-                    <span>📍 广西</span>
-                    <span>💰 金额：4,600 元</span>
-                    <span>⏰ 截止：2026-05-12 09:00</span>
-                    <span class="tag">竞价采购</span>
+                    <span>📍 广西</span><span>💰 金额：4,600 元</span><span>⏰ 截止：2026-05-12 09:00</span><span class="tag">竞价采购</span>
                     <a href="https://www.bidcenter.com.cn/news-417517338-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
                 </div>
                 <div class="accordion-content">
                     <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">62026050765120509</span></div>
-                                <div class="detail-item"><span class="detail-label">采购单位</span><span class="detail-value">南宁市第一人民医院</span></div>
-                                <div class="detail-item"><span class="detail-label">报价时间</span><span class="detail-value">2026-05-12 09:00-09:46</span></div>
+                        <div class="detail-section"><div class="detail-grid">
+                            <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">62026050765120509</span></div>
+                            <div class="detail-item"><span class="detail-label">采购单位</span><span class="detail-value">南宁市第一人民医院</span></div>
+                            <div class="detail-item"><span class="detail-label">报价时间</span><span class="detail-value">2026-05-12 09:00-09:46</span></div>
+                        </div></div>
+                        <div class="detail-content">
+                            <h4 class="detail-title">一、项目信息</h4>
+                            <p><strong>项目名称：</strong>南宁市第一人民医院互联网医院管理办公室采购办公家具</p>
+                            <p><strong>项目编号：</strong>62026050765120509</p>
+                            <p><strong>项目联系人及联系方式：</strong>吴昊 19195834793</p>
+                            <p><strong>报价起止时间：</strong>2026-05-12 09:00 - 2026-05-12 09:46</p>
+                            <p><strong>采购单位：</strong>南宁市第一人民医院</p>
+                            <p><strong>供应商资质要求：</strong>1、符合《中华人民共和国政府采购法》第二十二条的规定。2、符合《关于规范政府采购供应商资格设定及资格审查的通知》第六条规定。3、已在本系统注册并通过资质初审的供应商。</p>
+                            
+                            <h4 class="detail-title">二、采购需求清单</h4>
+                            <table class="detail-table">
+                                <tr><th>商品名称</th><th>参数要求</th><th>购买数量</th><th>控制金额</th><th>意向品牌</th></tr>
+                                <tr><td>折叠桌</td><td>核心参数要求：商品类目：办公桌；参数：尺寸 1.2×0.6m、木板厚度≥15mm，免漆板、防水防潮、烤漆黑色框架金属包边简易折叠桌</td><td>20 张</td><td>4,600.00</td><td>-</td></tr>
+                            </table>
+                            <p><strong>买家留言：</strong>以我方实际需求为准，如有不符我方有权取消订单</p>
+                            <p><strong>附件：</strong>折叠桌参考样式.png</p>
+                            <p><strong>响应附件要求：</strong>产品参数加盖公章上传</p>
+                            
+                            <h4 class="detail-title">三、收货信息</h4>
+                            <p><strong>送货方式：</strong>送货上门</p>
+                            <p><strong>送货时间：</strong>工作日 09:00-17:00</p>
+                            <p><strong>送货期限：</strong>竞价成交后 3 个工作日内</p>
+                            <p><strong>送货地址：</strong>广西壮族自治区南宁市青秀区中山街道七星路 89 号南宁市第一人民医院</p>
+                            
+                            <h4 class="detail-title">四、商务要求</h4>
+                            <p><strong>质量保证：</strong>1.供应商所提供的货物型号、技术规格、技术参数等质量必须与本次采购要求和承诺相一致。2.供应商所提供的货物必须是全新、未使用的原装产品。3.供应商所投标的产品如有计算机、打印机、空调等财库〔2019〕19 号文规定的环保、节能产品政府采购品目清单中产品，须符合国家相关环保节能要求，并达到国家二级或以上能效（水效）标准。</p>
+                            <p><strong>售后服务：</strong>按国家有关产品"三包"规定执行"三包"，所提供的货物必须是全新的合格产品，保修期至少 1 年（免费保修期从货物验收合格之日起计算）</p>
+                            
+                            <div class="contact-info">
+                                <p><strong>注意事项：</strong>1、如成交供应商未与采购人沟通、未经采购人同意、未告知采购人送货方式等情况下，直接以快递方式发送货物，如出现货物丢失、货物损坏、货物长时间未接收等一系列问题，全部由成交供应商负责；2、一旦发现虚假响应，即使确认成交也将被取消供货资格，采购人有权追究恶意扰乱规则的供应商责任，并向政府采购监管平台投诉。</p>
                             </div>
                         </div>
-                        <div class="detail-title">采购需求</div>
-                        <table class="detail-table">
-                            <tr><th>商品名称</th><th>参数要求</th><th>数量</th><th>控制金额</th></tr>
-                            <tr><td>折叠桌</td><td>尺寸 1.2×0.6m、木板厚度≥15mm，免漆板、防水防潮、烤漆黑色框架金属包边</td><td>20 张</td><td>4,600 元</td></tr>
-                        </table>
-                        <div class="contact-info">
-                            <p><strong>联系人：</strong>吴昊 19195834793</p>
-                            <p><strong>送货地址：</strong>南宁市青秀区七星路 89 号</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-4">
-                <div class="accordion-header" onclick="toggleItem('item-4')">
-                    <div class="accordion-title">东莞市水乡中心医院智慧健康核心数据采集接口改造服务采购公告</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 广东</span>
-                    <span>💰 限价：62,000 元</span>
-                    <span>⏰ 截止：2026-05-11</span>
-                    <span class="tag">询价采购</span>
-                    <a href="https://www.bidcenter.com.cn/news-417502955-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">SXZX-CG-260502</span></div>
-                                <div class="detail-item"><span class="detail-label">采购方式</span><span class="detail-value">询价采购</span></div>
-                                <div class="detail-item"><span class="detail-label">最高限价</span><span class="detail-value">62,000 元</span></div>
-                            </div>
-                        </div>
-                        <div class="detail-title">项目概况</div>
-                        <p>智慧健康核心数据采集接口改造服务 1 项</p>
-                        <div class="contact-info">
-                            <p><strong>联系人：</strong>廖先生 0769-88829569</p>
-                            <p><strong>地址：</strong>东莞市麻涌镇东环路 10 号</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-5">
-                <div class="accordion-header" onclick="toggleItem('item-5')">
-                    <div class="accordion-title">中山火炬开发区人民医院信息化项目监理服务采购公告</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 广东</span>
-                    <span>💰 投资：468.68 万元</span>
-                    <span>⏰ 截止：2026-05-11 09:00</span>
-                    <span class="tag">监理服务</span>
-                    <a href="https://www.bidcenter.com.cn/news-417498305-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">4420000034572664582605061885</span></div>
-                                <div class="detail-item"><span class="detail-label">投资额</span><span class="detail-value">4,686,800 元</span></div>
-                                <div class="detail-item"><span class="detail-label">服务金额</span><span class="detail-value">67,300 元</span></div>
-                                <div class="detail-item"><span class="detail-label">服务期限</span><span class="detail-value">1 年</span></div>
-                            </div>
-                        </div>
-                        <div class="detail-title">服务内容</div>
-                        <ul class="detail-list">
-                            <li>提供实施阶段和验收阶段的监理服务</li>
-                            <li>提供驻点服务</li>
-                            <li>监理团队不少于 3 人（总监 1 名、总监代表 1 名、现场监理 1 名）</li>
-                        </ul>
-                        <div class="contact-info">
-                            <p><strong>采购单位：</strong>中山火炬开发区人民医院</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-6">
-                <div class="accordion-header" onclick="toggleItem('item-6')">
-                    <div class="accordion-title">建行重庆市分行石柱土家族自治县人民医院"智慧医院"建设项目供应商征集公告</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 重庆</span>
-                    <span>📋 类型：供应商征集</span>
-                    <span>⏰ 截止：2026-05-12 17:00</span>
-                    <span class="tag">征集公告</span>
-                    <a href="https://www.bidcenter.com.cn/news-417492273-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">征集类型</span><span class="detail-value">供应商征集</span></div>
-                                <div class="detail-item"><span class="detail-label">征集截止</span><span class="detail-value">2026-05-12 17:00</span></div>
-                            </div>
-                        </div>
-                        <div class="detail-title">报名资格要求</div>
-                        <ul class="detail-list">
-                            <li>中华人民共和国境内合法注册的民事主体</li>
-                            <li>具备丰富的行业服务经验</li>
-                            <li>拥有一个及以上医疗设备供应实施案例（提供合同）</li>
-                        </ul>
-                        <div class="detail-title">报名方式</div>
-                        <p>登录建设银行采购平台 <strong>ibuy.ccb.com</strong> 进行报名</p>
-                        <div class="contact-info">
-                            <p><strong>需求部门：</strong>郑老师 023-63771334</p>
-                            <p><strong>采购部门：</strong>余老师、刘老师 023-63771695</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-7">
-                <div class="accordion-header" onclick="toggleItem('item-7')">
-                    <div class="accordion-title">大化瑶族自治县妇幼保健院采购公告（彩超可视人流诊疗系统）</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 广西</span>
-                    <span>💰 预算：180,000 元</span>
-                    <span>⏰ 截止：2026-05-14 15:00</span>
-                    <span class="tag">院内询价</span>
-                    <a href="https://www.bidcenter.com.cn/news-417497043-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">采购编号</span><span class="detail-value">DHFY-SB-202605-01</span></div>
-                                <div class="detail-item"><span class="detail-label">采购方式</span><span class="detail-value">院内询价采购</span></div>
-                                <div class="detail-item"><span class="detail-label">预算金额</span><span class="detail-value">180,000 元</span></div>
-                                <div class="detail-item"><span class="detail-label">报名时间</span><span class="detail-value">05-07 至 05-14 15:00</span></div>
-                            </div>
-                        </div>
-                        <div class="detail-title">采购内容</div>
-                        <p>彩超可视人流诊疗系统 1 台</p>
-                        <div class="contact-info">
-                            <p><strong>现场报名：</strong>医院 3 号楼十二楼设备科</p>
-                            <p><strong>邮寄地址：</strong>大化瑶族自治县镇北文化路 52 号 唐科长 15078635377</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-8">
-                <div class="accordion-header" onclick="toggleItem('item-8')">
-                    <div class="accordion-title">肃北蒙古族自治县第二人民医院信息化技术服务采购招标公告</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 甘肃</span>
-                    <span>💰 预算：100,000 元</span>
-                    <span>⏰ 截止：2026-05-10 10:30</span>
-                    <span class="tag">邀请招标</span>
-                    <a href="https://www.bidcenter.com.cn/news-417492067-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">GSZZN[2026]021 号</span></div>
-                                <div class="detail-item"><span class="detail-label">招标预算</span><span class="detail-value">100,000 元</span></div>
-                                <div class="detail-item"><span class="detail-label">评标办法</span><span class="detail-value">最低评标价法</span></div>
-                                <div class="detail-item"><span class="detail-label">竞价截止</span><span class="detail-value">2026-05-10 10:30</span></div>
-                            </div>
-                        </div>
-                        <div class="detail-title">竞价平台</div>
-                        <p>酒泉市公共资源交易中心甘肃省阳光招标采购平台</p>
-                        <div class="contact-info">
-                            <p><strong>采购人：</strong>肃北蒙古族自治县第二人民医院 赵婷婷 15095650585</p>
-                            <p><strong>代理机构：</strong>甘肃中芷诺项目管理有限公司 麻龙龙 17709370990</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-9">
-                <div class="accordion-header" onclick="toggleItem('item-9')">
-                    <div class="accordion-title">海口市人民医院医疗设备市场询价公告（二次）</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 海南</span>
-                    <span>💰 预算：详见文件</span>
-                    <span>⏰ 截止：2026-05-09 17:00</span>
-                    <span class="tag">询价采购</span>
-                    <a href="https://www.bidcenter.com.cn/news-417483609-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">HKPH-20250418-1</span></div>
-                                <div class="detail-item"><span class="detail-label">项目名称</span><span class="detail-value">海口市人民医院医疗设备更新项目二期 -4</span></div>
-                                <div class="detail-item"><span class="detail-label">报名截止</span><span class="detail-value">2026-05-09 17:00</span></div>
-                            </div>
-                        </div>
-                        <div class="contact-info">
-                            <p><strong>报名地点：</strong>海口市人民医院综合保障楼 B 座 1 楼 114 室</p>
-                            <p><strong>联系人：</strong>朱女士 0898-66189580</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-10">
-                <div class="accordion-header" onclick="toggleItem('item-10')">
-                    <div class="accordion-title">融水苗族自治县人民医院专线防火墙采购项目院内议价公告</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 广西</span>
-                    <span>💰 控制价：53,000 元</span>
-                    <span>⏰ 截止：2026-05-13 10:00</span>
-                    <span class="tag">院内议价</span>
-                    <a href="https://www.bidcenter.com.cn/news-417482991-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">RYCG2026062</span></div>
-                                <div class="detail-item"><span class="detail-label">采购控制价</span><span class="detail-value">53,000 元</span></div>
-                                <div class="detail-item"><span class="detail-label">服务期限</span><span class="detail-value">合同签订后 7 个工作日内</span></div>
-                            </div>
-                        </div>
-                        <div class="detail-title">采购内容</div>
-                        <p>下一代防火墙设备 1 台，含安装调试、3 年硬件质保及软件特征库升级服务</p>
-                        <div class="contact-info">
-                            <p><strong>议价时间：</strong>2026 年 5 月 13 日上午 10:00</p>
-                            <p><strong>项目咨询：</strong>信息科 陆先生 0772-5130087</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-11">
-                <div class="accordion-header" onclick="toggleItem('item-11')">
-                    <div class="accordion-title">达州市中西医结合医院超声胎儿监护仪（远程胎监）采购公告</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 四川</span>
-                    <span>💰 控制价：270,000 元</span>
-                    <span>⏰ 截止：2026-05-11 15:00</span>
-                    <span class="tag">综合评分</span>
-                    <a href="https://www.bidcenter.com.cn/news-417469953-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">采购控制价</span><span class="detail-value">270,000 元</span></div>
-                                <div class="detail-item"><span class="detail-label">评标办法</span><span class="detail-value">综合评分法</span></div>
-                                <div class="detail-item"><span class="detail-label">截止交付</span><span class="detail-value">2026-05-11 15:00</span></div>
-                            </div>
-                        </div>
-                        <div class="detail-title">项目简介</div>
-                        <p>超声胎儿监护仪（远程胎监）20 台及判读、咨询、回访服务</p>
-                        <div class="contact-info">
-                            <p><strong>招标采购科：</strong>0818-2375103</p>
-                            <p><strong>监督电话：</strong>0818-2350896</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-12">
-                <div class="accordion-header" onclick="toggleItem('item-12')">
-                    <div class="accordion-title">南京市第二医院生物样本库信息系统调研公告</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 江苏</span>
-                    <span>📋 类型：市场调研</span>
-                    <span>⏰ 截止：2026-05-12</span>
-                    <span class="tag">调研公告</span>
-                    <a href="https://www.bidcenter.com.cn/news-417466424-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">报名时间</span><span class="detail-value">2026-05-07 至 05-12</span></div>
-                                <div class="detail-item"><span class="detail-label">报名地点</span><span class="detail-value">汤山院区 A 楼 2 层招标采购中心</span></div>
-                            </div>
-                        </div>
-                        <div class="contact-info">
-                            <p><strong>招采中心：</strong>秦老师 025-85091725</p>
-                            <p><strong>技术咨询：</strong>董老师 18900686916</p>
-                            <p><strong>邮箱：</strong>njeyzbcg@163.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-13">
-                <div class="accordion-header" onclick="toggleItem('item-13')">
-                    <div class="accordion-title">安徽相王医疗健康股份有限公司相王健康智慧医院建设设计项目比选公告</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 安徽</span>
-                    <span>💰 预算：200,000 元</span>
-                    <span>⏰ 截止：2026-05-20 09:30</span>
-                    <span class="tag">比选采购</span>
-                    <a href="https://www.bidcenter.com.cn/news-417451991-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">26AT135083702682</span></div>
-                                <div class="detail-item"><span class="detail-label">项目预算</span><span class="detail-value">200,000 元（含税）</span></div>
-                                <div class="detail-item"><span class="detail-label">服务期</span><span class="detail-value">40 个工作日</span></div>
-                                <div class="detail-item"><span class="detail-label">开标时间</span><span class="detail-value">2026-05-20 09:30</span></div>
-                            </div>
-                        </div>
-                        <div class="contact-info">
-                            <p><strong>采购人：</strong>罗工 0561-5252059</p>
-                            <p><strong>代理机构：</strong>杨易、陈润泽 0551-63736286</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-14">
-                <div class="accordion-header" onclick="toggleItem('item-14')">
-                    <div class="accordion-title">兰州市肺科医院智慧医院建设暨传染病综合救治能力提升工程可行性研究报告编制服务项目招标公告</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 甘肃</span>
-                    <span>💰 预算：85,000 元</span>
-                    <span>⏰ 截止：2026-05-09 15:00</span>
-                    <span class="tag">邀请招标</span>
-                    <a href="https://www.bidcenter.com.cn/news-417453269-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">GSZYTC-ZX-26091</span></div>
-                                <div class="detail-item"><span class="detail-label">预算金额</span><span class="detail-value">85,000 元</span></div>
-                                <div class="detail-item"><span class="detail-label">竞价截止</span><span class="detail-value">2026-05-09 15:00</span></div>
-                            </div>
-                        </div>
-                        <div class="contact-info">
-                            <p><strong>采购人：</strong>王帅 13659432162</p>
-                            <p><strong>代理机构：</strong>王玮、陈洪珊 0931-5101611</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">
-                📌 招标预告 <span class="badge">5 条</span>
-                <span class="actions">
-                    <a onclick="expandAll('preview')">全部展开</a>
-                    <a onclick="collapseAll('preview')">全部收起</a>
-                </span>
-            </div>
-            
-            <div class="accordion-item" id="item-15">
-                <div class="accordion-header" onclick="toggleItem('item-15')">
-                    <div class="accordion-title">平度市人民医院信息运维服务采购需求公示</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 山东</span>
-                    <span>💰 预算：2,682,442 元</span>
-                    <span>📅 日期：2026-05-07</span>
-                    <a href="https://www.bidcenter.com.cn/news-417548416-2.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">采购单位</span><span class="detail-value">平度市人民医院</span></div>
-                                <div class="detail-item"><span class="detail-label">总预算</span><span class="detail-value">2,682,442 元</span></div>
-                                <div class="detail-item"><span class="detail-label">编制时间</span><span class="detail-value">2026-04-29</span></div>
-                            </div>
-                        </div>
-                        <div class="detail-title">项目概况</div>
-                        <p>通过购买服务的方式，实现平度市人民医院信息化和智能化系统运维服务、存储设备运维服务以及办公打印机租赁运维服务</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-16">
-                <div class="accordion-header" onclick="toggleItem('item-16')">
-                    <div class="accordion-title">重庆市万盛经济技术开发区人民医院信息化需求调查调查问卷</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 重庆</span>
-                    <span>📋 关键词：信息化、电子签名、CA、无感就医</span>
-                    <span>⏰ 截止：2026-05-12 18:00</span>
-                    <a href="https://www.bidcenter.com.cn/news-417520164-2.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">需求单位</span><span class="detail-value">重庆市万盛经济技术开发区人民医院</span></div>
-                                <div class="detail-item"><span class="detail-label">关键词</span><span class="detail-value">信息化、电子签名、CA、无感就医</span></div>
-                                <div class="detail-item"><span class="detail-label">截止时间</span><span class="detail-value">2026-05-12 18:00</span></div>
-                            </div>
-                        </div>
-                        <div class="contact-info">
-                            <p><strong>联系人：</strong>刘进籽</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-17">
-                <div class="accordion-header" onclick="toggleItem('item-17')">
-                    <div class="accordion-title">成都市新都区卫生健康局 2026 年新都区区管干部健康体检项目采购意向</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 四川</span>
-                    <span>💰 预算：2,000,000 元</span>
-                    <span>📅 预计采购：2026 年 06 月</span>
-                    <a href="https://www.bidcenter.com.cn/news-417519833-2.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">预算金额</span><span class="detail-value">2,000,000 元</span></div>
-                                <div class="detail-item"><span class="detail-label">预计采购</span><span class="detail-value">2026 年 06 月</span></div>
-                            </div>
-                        </div>
-                        <div class="detail-title">采购需求</div>
-                        <p>为区管干部提供健康体检服务，需完成体检任务并出具体检报告，对体检报告进行常规的数据分析、解读，及时发现健康风险。</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-18">
-                <div class="accordion-header" onclick="toggleItem('item-18')">
-                    <div class="accordion-title">首都医科大学附属北京安贞医院"VA-ECMO 早期联合 IABP 治疗心源性休克的多中心、随机对照研究"管理服务项目采购意向</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 北京</span>
-                    <span>💰 预算：1,560,000 元</span>
-                    <span>📅 预计采购：2026-06</span>
-                    <a href="https://www.bidcenter.com.cn/news-417513318-2.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">预算金额</span><span class="detail-value">1,560,000 元</span></div>
-                                <div class="detail-item"><span class="detail-label">预计采购</span><span class="detail-value">2026-06</span></div>
-                                <div class="detail-item"><span class="detail-label">服务周期</span><span class="detail-value">约 36 个月</span></div>
-                            </div>
-                        </div>
-                        <div class="detail-title">采购目标</div>
-                        <p>通过专业临床研究服务机构提供的全流程管理，实现 VA-ECMO 早期联合 IABP 治疗心源性休克的多中心、随机对照临床研究的规范化、高质量开展。</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-19">
-                <div class="accordion-header" onclick="toggleItem('item-19')">
-                    <div class="accordion-title">河北省第六人民医院病案无纸化系统采购意向</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 河北</span>
-                    <span>💰 预算：1,500,000 元</span>
-                    <span>📅 预计采购：2026-07</span>
-                    <a href="https://www.bidcenter.com.cn/news-417440439-2.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">预算金额</span><span class="detail-value">1,500,000 元</span></div>
-                                <div class="detail-item"><span class="detail-label">预计采购</span><span class="detail-value">2026-07</span></div>
-                            </div>
-                        </div>
-                        <div class="detail-title">采购需求</div>
-                        <p>为满足医院业务发展需求，计划采购病案无纸化归档系统，旨在提高病历归档质量和效率，保证数据完整性、一致性、可追溯性，建设无纸化、数字化、可信化病案平台。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">
-                🏆 中标结果 <span class="badge">6 条</span>
-                <span class="actions">
-                    <a onclick="expandAll('result')">全部展开</a>
-                    <a onclick="collapseAll('result')">全部收起</a>
-                </span>
-            </div>
-            
-            <div class="accordion-item" id="item-20">
-                <div class="accordion-header" onclick="toggleItem('item-20')">
-                    <div class="accordion-title">定西市安定区妇幼保健院医院信息化升级建设项目（第二次）标包 2 询比结果公示</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 甘肃</span>
-                    <span>🏆 中标：甘肃义扬通达电子科技有限公司</span>
-                    <span>📅 日期：2026-05-07</span>
-                    <a href="https://www.bidcenter.com.cn/news-417546860-4.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">GSBBFA2026031700031</span></div>
-                                <div class="detail-item"><span class="detail-label">采购人</span><span class="detail-value">中国电信股份有限公司定西分公司</span></div>
-                                <div class="detail-item"><span class="detail-label">日期</span><span class="detail-value">2026-05-06</span></div>
-                            </div>
-                        </div>
-                        <div class="detail-title">成交结果</div>
-                        <table class="detail-table">
-                            <tr><th>排名</th><th>成交供应商</th></tr>
-                            <tr><td>1</td><td>甘肃义扬通达电子科技有限公司</td></tr>
-                        </table>
-                        <div class="contact-info">
-                            <p><strong>代理机构：</strong>浙江中通通信有限公司</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-21">
-                <div class="accordion-header" onclick="toggleItem('item-21')">
-                    <div class="accordion-title">安顺市西秀区人民医院智慧医院信息化系统建设设计项目结果公告</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 贵州</span>
-                    <span>💰 金额：200,000 元</span>
-                    <span>🏆 中标：天元瑞信通信技术股份有限公司</span>
-                    <a href="https://www.bidcenter.com.cn/news-417498052-4.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">GZRZ-26-ASMZC07</span></div>
-                                <div class="detail-item"><span class="detail-label">中标金额</span><span class="detail-value">200,000 元</span></div>
-                            </div>
-                        </div>
-                        <div class="contact-info">
-                            <p><strong>采购人：</strong>燕鹏 0851-38128249</p>
-                            <p><strong>代理机构：</strong>莫正滴 18285124948</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-22">
-                <div class="accordion-header" onclick="toggleItem('item-22')">
-                    <div class="accordion-title">荣县精神病医院信息化建设咨询服务采购项目中标公告</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 四川</span>
-                    <span>💰 金额：168,500 元</span>
-                    <span>🏆 中标：成都康川医疗信息咨询有限公司</span>
-                    <a href="https://www.bidcenter.com.cn/news-417505087-4.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">GXHT202604005</span></div>
-                                <div class="detail-item"><span class="detail-label">中标金额</span><span class="detail-value">168,500 元</span></div>
-                            </div>
-                        </div>
-                        <div class="contact-info">
-                            <p><strong>中标单位：</strong>成都康川医疗信息咨询有限公司</p>
-                            <p><strong>地址：</strong>成都高新区天府大道中段 1388 号</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-23">
-                <div class="accordion-header" onclick="toggleItem('item-23')">
-                    <div class="accordion-title">2026 年乌鲁木齐市第四人民医院 12356 心理援助热线信息系统采购项目中标 (成交) 结果公告</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 新疆</span>
-                    <span>💰 金额：250,000 元</span>
-                    <span>🏆 中标：北京强讯科技有限公司</span>
-                    <a href="https://www.bidcenter.com.cn/news-417445403-4.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">WZCG-ZCY202601001</span></div>
-                                <div class="detail-item"><span class="detail-label">中标金额</span><span class="detail-value">250,000 元</span></div>
-                                <div class="detail-item"><span class="detail-label">评审得分</span><span class="detail-value">94.95</span></div>
-                            </div>
-                        </div>
-                        <div class="detail-title">主要标的</div>
-                        <ul class="detail-list">
-                            <li>地市级心理援助热线系统 - 112,000 元</li>
-                            <li>坐席员通讯台（28 台） - 8,400 元</li>
-                            <li>省级心理援助热线数据中心系统 - 53,600 元</li>
-                            <li>可视化显示大屏 - 20,000 元</li>
-                            <li>配套硬件 - 30,000 元</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-24">
-                <div class="accordion-header" onclick="toggleItem('item-24')">
-                    <div class="accordion-title">广东省监狱中心医院省监狱局监狱中心医院信息化运维（2026 年）项目合同公告</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 广东</span>
-                    <span>💰 金额：828,000 元</span>
-                    <span>🏆 中标：广州市高科通信技术股份有限公司</span>
-                    <a href="https://www.bidcenter.com.cn/news-417519598-4.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">合同编号</span><span class="detail-value">ZHZX-FW-2026-04</span></div>
-                                <div class="detail-item"><span class="detail-label">合同金额</span><span class="detail-value">828,000 元</span></div>
-                                <div class="detail-item"><span class="detail-label">履约期限</span><span class="detail-value">2026-05-01 至 2027-04-30</span></div>
-                            </div>
-                        </div>
-                        <div class="contact-info">
-                            <p><strong>中标供应商：</strong>广州市高科通信技术股份有限公司</p>
-                            <p><strong>地址：</strong>广州市天河区高普路 168 号</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item" id="item-25">
-                <div class="accordion-header" onclick="toggleItem('item-25')">
-                    <div class="accordion-title">广州市花都区疾病预防控制中心广州市试点区大肠癌粪便基因检测的试剂耗材及实验室检测等相关服务合同公告</div>
-                    <div class="accordion-icon">▼</div>
-                </div>
-                <div class="accordion-meta">
-                    <span>📍 广东</span>
-                    <span>💰 金额：2,200,000 元</span>
-                    <span>🏆 中标：广州康立明生物科技股份有限公司</span>
-                    <a href="https://www.bidcenter.com.cn/news-417517259-4.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="detail-section">
-                            <div class="detail-grid">
-                                <div class="detail-item"><span class="detail-label">合同编号</span><span class="detail-value">HJZC[2026]0017</span></div>
-                                <div class="detail-item"><span class="detail-label">合同金额</span><span class="detail-value">2,200,000 元</span></div>
-                                <div class="detail-item"><span class="detail-label">履约期限</span><span class="detail-value">2026-02-28 至 2026-12-31</span></div>
-                            </div>
-                        </div>
-                        <div class="detail-title">主要标的</div>
-                        <table class="detail-table">
-                            <tr><th>名称</th><th>数量</th><th>单价</th><th>总价</th></tr>
-                            <tr><td>大肠癌粪便基因检测</td><td>10,000 人份</td><td>220 元</td><td>2,200,000 元</td></tr>
-                        </table>
                     </div>
                 </div>
             </div>
@@ -1122,40 +315,18 @@
         function toggleItem(id) {
             const item = document.getElementById(id);
             const isActive = item.classList.contains('active');
-            
-            // 关闭所有其他展开的项
-            document.querySelectorAll('.accordion-item.active').forEach(i => {
-                if (i.id !== id) {
-                    i.classList.remove('active');
-                }
-            });
-            
-            // 切换当前项
+            document.querySelectorAll('.accordion-item.active').forEach(i => { if (i.id !== id) i.classList.remove('active'); });
             item.classList.toggle('active');
         }
-        
-        function expandAll(section) {
-            const sectionEl = event.target.closest('.section');
-            sectionEl.querySelectorAll('.accordion-item').forEach(item => {
-                item.classList.add('active');
-            });
+        function expandAll(e) {
+            const section = e.target.closest('.section');
+            section.querySelectorAll('.accordion-item').forEach(item => item.classList.add('active'));
         }
-        
-        function collapseAll(section) {
-            const sectionEl = event.target.closest('.section');
-            sectionEl.querySelectorAll('.accordion-item').forEach(item => {
-                item.classList.remove('active');
-            });
+        function collapseAll(e) {
+            const section = e.target.closest('.section');
+            section.querySelectorAll('.accordion-item').forEach(item => item.classList.remove('active'));
         }
-        
-        // ESC 键关闭所有展开的项
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                document.querySelectorAll('.accordion-item.active').forEach(item => {
-                    item.classList.remove('active');
-                });
-            }
-        });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') document.querySelectorAll('.accordion-item.active').forEach(i => i.classList.remove('active')); });
     </script>
 </body>
 </html>
