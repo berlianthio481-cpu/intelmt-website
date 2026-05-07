@@ -5,75 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>采招网招投标信息简报 - 2026 年 05 月 07 日</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .container { max-width: 1000px; margin: 0 auto; background: #fff; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
-        .header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: #fff; padding: 30px; text-align: center; }
-        .header h1 { font-size: 28px; margin-bottom: 15px; font-weight: 600; }
-        .header .meta { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; font-size: 14px; opacity: 0.9; }
-        .stats { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; padding: 25px; background: #f8f9fa; border-bottom: 1px solid #e9ecef; }
-        .stat-card { background: #fff; border-radius: 12px; padding: 15px 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-        .stat-card .number { font-size: 28px; font-weight: 700; color: #1e3c72; }
-        .stat-card .label { font-size: 12px; color: #6c757d; }
-        .section { padding: 25px 30px; border-bottom: 1px solid #e9ecef; }
-        .section-title { font-size: 20px; color: #1e3c72; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; padding-bottom: 10px; border-bottom: 2px solid #667eea; }
-        .section-title .badge { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; padding: 3px 10px; border-radius: 20px; font-size: 12px; }
-        .section-title .actions { font-size: 13px; }
-        .section-title .actions a { color: #667eea; cursor: pointer; margin-left: 15px; text-decoration: none; }
-        .accordion-item { border: 1px solid #e9ecef; border-radius: 10px; margin-bottom: 15px; overflow: hidden; background: #fff; }
-        .accordion-header { display: flex; justify-content: space-between; align-items: flex-start; padding: 18px; cursor: pointer; background: #f8f9fa; user-select: none; }
-        .accordion-header:hover { background: #e9ecef; }
-        .accordion-item.active .accordion-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; }
-        .accordion-title { flex: 1; font-size: 16px; font-weight: 600; color: #212529; margin-right: 15px; }
-        .accordion-item.active .accordion-title { color: #fff; }
-        .accordion-icon { width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: transform 0.3s ease; flex-shrink: 0; }
-        .accordion-item.active .accordion-icon { transform: rotate(180deg); }
-        .accordion-meta { display: flex; flex-wrap: wrap; gap: 15px; padding: 0 18px 18px 18px; font-size: 13px; color: #6c757d; }
-        .accordion-item.active .accordion-meta { color: rgba(255,255,255,0.9); }
-        .accordion-meta span { display: flex; align-items: center; gap: 5px; }
-        .accordion-meta .tag { background: #e9ecef; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
-        .accordion-item.active .accordion-meta .tag { background: rgba(255,255,255,0.2); color: #fff; }
-        .accordion-link { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; text-decoration: none; border-radius: 20px; font-size: 12px; white-space: nowrap; margin-left: 10px; }
-        .accordion-item.active .accordion-link { background: #fff; color: #667eea; }
-        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #fff; }
-        .accordion-item.active .accordion-content { max-height: 600px; overflow-y: auto; }
-        .content-inner { padding: 25px; border-top: 1px solid #e9ecef; }
-        .detail-section { background: #f8f9fa; border-radius: 8px; padding: 15px; margin-bottom: 20px; }
-        .detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
-        .detail-item { display: flex; flex-direction: column; gap: 4px; }
-        .detail-label { font-size: 12px; color: #6c757d; font-weight: 500; }
-        .detail-value { font-size: 14px; color: #212529; font-weight: 600; }
-        .detail-title { font-size: 16px; color: #1e3c72; margin: 25px 0 12px 0; padding-bottom: 8px; border-bottom: 2px solid #667eea; font-weight: 600; }
-        .detail-content { line-height: 1.8; color: #333; font-size: 14px; }
-        .detail-content p { margin-bottom: 12px; }
-        .detail-content strong { color: #1e3c72; }
-        .detail-list { list-style: none; padding-left: 0; margin: 15px 0; }
-        .detail-list li { padding: 8px 0; padding-left: 20px; position: relative; color: #333; line-height: 1.6; }
-        .detail-list li:before { content: "▸"; position: absolute; left: 0; color: #667eea; font-weight: bold; }
-        .detail-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-        .detail-table th, .detail-table td { border: 1px solid #e9ecef; padding: 10px; text-align: left; font-size: 13px; }
-        .detail-table th { background: #f8f9fa; font-weight: 600; color: #1e3c72; }
-        .contact-info { background: #e8f4f8; border-radius: 8px; padding: 15px; margin-top: 20px; }
-        .contact-info p { margin-bottom: 8px; font-size: 14px; color: #333; }
-        .contact-info strong { color: #1e3c72; }
-        .attachment-box { background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 15px; margin-top: 15px; }
-        .attachment-box p { color: #f57c00; font-weight: 600; }
-        .footer { background: #f8f9fa; padding: 20px 30px; text-align: center; font-size: 13px; color: #6c757d; }
-        .footer a { color: #667eea; text-decoration: none; }
-        
-        /* 自定义滚动条 */
-        .accordion-content::-webkit-scrollbar { width: 6px; }
-        .accordion-content::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 3px; }
-        .accordion-content::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 3px; }
-        .accordion-content::-webkit-scrollbar-thumb:hover { background: #a1a1a1; }
-        
-        @media (max-width: 768px) { .stats { grid-template-columns: repeat(4, 1fr); } .section { padding: 20px 15px; } .accordion-header { flex-direction: column; gap: 10px; } .accordion-link { margin-left: 0; margin-top: 10px; } }
-        @media (max-width: 480px) { .stats { grid-template-columns: repeat(2, 1fr); } .header h1 { font-size: 22px; } }
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;padding:20px}.container{max-width:1000px;margin:0 auto;background:#fff;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.3);overflow:hidden}.header{background:linear-gradient(135deg,#1e3c72 0%,#2a5298 100%);color:#fff;padding:30px;text-align:center}.header h1{font-size:28px;margin-bottom:15px;font-weight:600}.header .meta{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;font-size:14px;opacity:0.9}.stats{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;padding:25px;background:#f8f9fa;border-bottom:1px solid #e9ecef}.stat-card{background:#fff;border-radius:12px;padding:15px 10px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.08)}.stat-card .number{font-size:28px;font-weight:700;color:#1e3c72}.stat-card .label{font-size:12px;color:#6c757d}.section{padding:25px 30px;border-bottom:1px solid #e9ecef}.section-title{font-size:20px;color:#1e3c72;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;padding-bottom:10px;border-bottom:2px solid #667eea}.section-title .badge{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:3px 10px;border-radius:20px;font-size:12px}.section-title .actions{font-size:13px}.section-title .actions a{color:#667eea;cursor:pointer;margin-left:15px;text-decoration:none}.accordion-item{border:1px solid #e9ecef;border-radius:10px;margin-bottom:15px;overflow:hidden;background:#fff}.accordion-header{display:flex;justify-content:space-between;align-items:flex-start;padding:18px;cursor:pointer;background:#f8f9fa;user-select:none}.accordion-header:hover{background:#e9ecef}.accordion-item.active .accordion-header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff}.accordion-title{flex:1;font-size:16px;font-weight:600;color:#212529;margin-right:15px}.accordion-item.active .accordion-title{color:#fff}.accordion-icon{width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:18px;transition:transform 0.3s ease;flex-shrink:0}.accordion-item.active .accordion-icon{transform:rotate(180deg)}.accordion-meta{display:flex;flex-wrap:wrap;gap:15px;padding:0 18px 18px 18px;font-size:13px;color:#6c757d}.accordion-item.active .accordion-meta{color:rgba(255,255,255,0.9)}.accordion-meta span{display:flex;align-items:center;gap:5px}.accordion-meta .tag{background:#e9ecef;padding:2px 8px;border-radius:4px;font-size:12px}.accordion-item.active .accordion-meta .tag{background:rgba(255,255,255,0.2);color:#fff}.accordion-link{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;text-decoration:none;border-radius:20px;font-size:12px;white-space:nowrap;margin-left:10px}.accordion-item.active .accordion-link{background:#fff;color:#667eea}.accordion-content{max-height:0;overflow:hidden;transition:max-height 0.3s ease;background:#fff}.accordion-item.active .accordion-content{max-height:600px;overflow-y:auto}.content-inner{padding:25px;border-top:1px solid #e9ecef}.detail-section{background:#f8f9fa;border-radius:8px;padding:15px;margin-bottom:20px}.detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}.detail-item{display:flex;flex-direction:column;gap:4px}.detail-label{font-size:12px;color:#6c757d;font-weight:500}.detail-value{font-size:14px;color:#212529;font-weight:600}.detail-title{font-size:16px;color:#1e3c72;margin:25px 0 12px 0;padding-bottom:8px;border-bottom:2px solid #667eea;font-weight:600}.detail-content{line-height:1.8;color:#333;font-size:14px}.detail-content p{margin-bottom:12px}.detail-content strong{color:#1e3c72}.detail-list{list-style:none;padding-left:0;margin:15px 0}.detail-list li{padding:8px 0;padding-left:20px;position:relative;color:#333;line-height:1.6}.detail-list li:before{content:"▸";position:absolute;left:0;color:#667eea;font-weight:bold}.detail-table{width:100%;border-collapse:collapse;margin:15px 0}.detail-table th,.detail-table td{border:1px solid #e9ecef;padding:10px;text-align:left;font-size:13px}.detail-table th{background:#f8f9fa;font-weight:600;color:#1e3c72}.contact-info{background:#e8f4f8;border-radius:8px;padding:15px;margin-top:20px}.contact-info p{margin-bottom:8px;font-size:14px;color:#333}.contact-info strong{color:#1e3c72}.attachment-box{background:#fff8e1;border:1px solid #ffe082;border-radius:8px;padding:15px;margin-top:15px}.attachment-box p{color:#f57c00;font-weight:600}.footer{background:#f8f9fa;padding:20px 30px;text-align:center;font-size:13px;color:#6c757d}.footer a{color:#667eea;text-decoration:none}.accordion-content::-webkit-scrollbar{width:6px}.accordion-content::-webkit-scrollbar-track{background:#f1f1f1;border-radius:3px}.accordion-content::-webkit-scrollbar-thumb{background:#c1c1c1;border-radius:3px}.accordion-content::-webkit-scrollbar-thumb:hover{background:#a1a1a1}@media(max-width:768px){.stats{grid-template-columns:repeat(4,1fr)}.section{padding:20px 15px}.accordion-header{flex-direction:column;gap:10px}.accordion-link{margin-left:0;margin-top:10px}}@media(max-width:480px){.stats{grid-template-columns:repeat(2,1fr)}.header h1{font-size:22px}}
     </style>
 </head>
 <body>
@@ -97,88 +29,70 @@
             
             <div class="accordion-item" id="item-1">
                 <div class="accordion-header" onclick="toggleItem('item-1')">
-                    <div class="accordion-title">新疆医科大学第一附属医院牙科显微镜采购项目（二次）公开招标公告</div>
+                    <div class="accordion-title">新疆医科大学第一附属医院牙科显微镜采购项目（二次）</div>
                     <div class="accordion-icon">▼</div>
                 </div>
                 <div class="accordion-meta">
-                    <span>📍 新疆</span><span>💰 预算：360,000 元</span><span>⏰ 截止：2026-06-01 11:00</span><span class="tag">公开招标</span>
+                    <span>📍 新疆</span><span>💰 360,000 元</span><span>⏰ 06-01 截止</span><span class="tag">公开招标</span>
                     <a href="https://www.bidcenter.com.cn/news-417517714-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
                 </div>
                 <div class="accordion-content">
                     <div class="content-inner">
                         <div class="detail-section"><div class="detail-grid">
                             <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">SJX-2025-652-02</span></div>
-                            <div class="detail-item"><span class="detail-label">采购方式</span><span class="detail-value">公开招标</span></div>
-                            <div class="detail-item"><span class="detail-label">预算金额</span><span class="detail-value">360,000 元</span></div>
-                            <div class="detail-item"><span class="detail-label">最高限价</span><span class="detail-value">198,000 元</span></div>
-                            <div class="detail-item"><span class="detail-label">采购数量</span><span class="detail-value">2 套</span></div>
-                            <div class="detail-item"><span class="detail-label">履约期限</span><span class="detail-value">合同签订后 30 天内</span></div>
+                            <div class="detail-item"><span class="detail-label">预算</span><span class="detail-value">360,000 元</span></div>
+                            <div class="detail-item"><span class="detail-label">限价</span><span class="detail-value">198,000 元</span></div>
+                            <div class="detail-item"><span class="detail-label">数量</span><span class="detail-value">2 套</span></div>
                         </div></div>
                         <div class="detail-content">
                             <h4 class="detail-title">一、项目基本情况</h4>
-                            <p><strong>项目编号：</strong>SJX-2025-652-02</p>
                             <p><strong>项目名称：</strong>新疆医科大学第一附属医院牙科显微镜采购项目（二次）</p>
                             <p><strong>采购方式：</strong>公开招标</p>
                             <p><strong>预算金额：</strong>360,000 元</p>
                             <p><strong>最高限价：</strong>198,000 元</p>
-                            <p><strong>采购需求：</strong>标项名称：新疆医科大学第一附属医院牙科显微镜采购项目（二次），数量：2，预算金额：360,000 元，单位：套，简要规格描述：牙科显微镜采购，详见本项目采购需求。</p>
-                            <p><strong>本项目（否）接受联合体投标：</strong>否</p>
+                            <p><strong>采购需求：</strong>牙科显微镜采购，数量：2 套</p>
+                            <p><strong>合同履行期限：</strong>自合同签订之日起 30 天内</p>
                             
-                            <h4 class="detail-title">二、申请人的资格要求</h4>
+                            <h4 class="detail-title">二、申请人资格要求</h4>
                             <ul class="detail-list">
-                                <li>满足《中华人民共和国政府采购法》第二十二条规定；</li>
-                                <li>落实政府采购政策需满足的资格要求：标项 1：本项目专门面向中小企业采购；</li>
-                                <li>本项目的特定资格要求：【标项 1】投标人具有医疗器械经营资格，属于医疗器械管理的产品需根据《医疗器械监督管理条例》(国务院令第 650 号) 有关内容办理医疗器产品注册或备案。</li>
+                                <li>满足《中华人民共和国政府采购法》第二十二条规定</li>
+                                <li>本项目专门面向中小企业采购</li>
+                                <li>投标人具有医疗器械经营资格</li>
                             </ul>
                             
                             <h4 class="detail-title">三、获取招标文件</h4>
-                            <p><strong>时间：</strong>2026 年 05 月 07 日至 2026 年 05 月 13 日，每天上午 00:00 至 14:00，下午 14:00 至 23:59（北京时间，法定节假日除外）</p>
-                            <p><strong>地点：</strong>政采云平台线上</p>
-                            <p><strong>方式：</strong>供应商登录政采云平台 https://www.zcygov.cn/ 在线申请获取采购文件（进入"项目采购"应用，在获取采购文件菜单中选择项目，申请获取采购文件），或者点击采购公告底部潜在供应商"获取采购文件"，页面跳转后登陆，直接获取采购文件。</p>
+                            <p><strong>时间：</strong>2026 年 05 月 07 日至 05 月 13 日，每天 00:00-14:00，14:00-23:59</p>
+                            <p><strong>地点：</strong>政采云平台线上 https://www.zcygov.cn/</p>
                             <p><strong>售价：</strong>0 元</p>
                             
-                            <h4 class="detail-title">四、提交投标文件截止时间、开标时间和地点</h4>
-                            <p><strong>截止时间：</strong>2026 年 06 月 01 日 11:00（北京时间）</p>
-                            <p><strong>投标地点：</strong>请登录政采云投标客户端投标</p>
-                            <p><strong>开标时间：</strong>2026 年 06 月 01 日 11:00（北京时间）</p>
-                            <p><strong>开标地点：</strong>投标人登录政采云平台 https://www.zcygov.cn/，进入"项目采购 - 开标评标 - 右边选择对应项目点击"进入项目"进入开标大厅。</p>
+                            <h4 class="detail-title">四、投标文件递交</h4>
+                            <p><strong>截止时间：</strong>2026 年 06 月 01 日 11:00</p>
+                            <p><strong>开标地点：</strong>政采云平台电子开标大厅</p>
                             
                             <h4 class="detail-title">五、公告期限</h4>
                             <p>自本公告发布之日起 5 个工作日。</p>
                             
                             <h4 class="detail-title">六、其他补充事宜</h4>
                             <p>1、本项目实行网上投标，采用电子投标文件。</p>
-                            <p>2、各供应商应在开标前确保成为正式注册入库供应商，并完成 CA 数字证书 (符合国密标准) 申领。因未注册入库、未办理 CA 数字证书等原因造成无法投标或投标失败等后果由供应商自行承担。如需咨询，请联系新疆 - 安信 CA 服务热线 0991-7810912；翔晟 CA 服务热线 025-66085508；新疆 CA 服务热线 4000921999。</p>
-                            <p>3、供应商将政采云电子交易客户端下载、安装完成后，可通过账号密码或 CA 登录客户端进行投标文件的制作。在使用政采云投标客户端时，建议使用 WIN7 及以上操作系统。</p>
-                            <p>4、其他事项：①关于本项目所有公告、公示在新疆政府采购网发布。②请投标单位随时关注本项目的澄清、答疑、变更事项。③本项目实行电子招投标，供应商须登录政采云平台申请获取招标文件，并通过政采云电子投标客户端制作响应文件，同时自行承担与投标有关的一切费用。④各供应商应在开标前确保成为新疆政府采购网正式注册入库供应商，并完成 CA 数字证书申领。因未注册入库、未办理 CA 数字证书等原因造成无法投标或投标失败等后果由供应商自行承担。⑤有意向参与电子开评标的供应商，可访问新疆数字证书认证中心官方网站（https://www.xjca.com.cn/）或下载"新疆政务通"APP 自行进行申领。如需咨询，请联系新疆 CA 服务热线 0991-2819290。</p>
+                            <p>2、各供应商应在开标前完成 CA 数字证书申领。咨询：新疆 - 安信 CA 0991-7810912；翔晟 CA 025-66085508；新疆 CA 4000921999。</p>
+                            <p>3、建议使用 WIN7 及以上操作系统。</p>
                             
                             <h4 class="detail-title">特别提示</h4>
                             <ul class="detail-list">
-                                <li>1、采购限额标准以上，200 万元以下的货物和服务采购项目、400 万元以下的工程采购项目，适宜由中小企业提供的，采购人应当专门面向中小企业采购。</li>
-                                <li>2、超过 200 万元的货物和服务采购项目，预留该部分采购项目预算总额的 30% 以上专门面向中小企业采购，其中预留给小微企业的比例不低于 60%。</li>
-                                <li>3、超过 400 万元的工程采购项目中适宜由中小企业提供的，预留该部分采购项目预算总额的 40% 以上专门面向中小企业采购，其中预留给小微企业的比例不低于 60%。</li>
-                                <li>4、对于未预留份额专门面向中小企业的采购项目，以及预留份额项目中的非预留部分采购包，采购人、采购代理机构应当对符合规定的小微企业报价给予 10%~20%（工程项目为 3%~5%）的扣除，用扣除后的价格参加评审。</li>
-                                <li>5、接受大中型企业与小微企业组成联合体或者允许大中型企业向一家或者多家小微企业分包的采购项目，对于联合协议或者分包意向协议约定小微企业的合同份额占到合同总金额 30% 以上的，采购人、采购代理机构应当对联合体或者大中型企业的报价给予 4%~6%（工程项目为 1%~2%）的扣除，用扣除后的价格参加评审。</li>
+                                <li>本项目专门面向中小企业采购</li>
+                                <li>小微企业报价给予 10%~20% 的扣除</li>
                             </ul>
                             
-                            <h4 class="detail-title">七、对本次采购提出询问，请按以下方式联系</h4>
+                            <h4 class="detail-title">七、联系方式</h4>
                             <div class="contact-info">
-                                <p><strong>1. 采购人信息</strong></p>
-                                <p>名 称：新疆医科大学第一附属医院</p>
-                                <p>地 址：乌鲁木齐鲤鱼山南路 137 号</p>
-                                <p>联系方式：0991-4362697</p>
-                                <p><strong>2. 采购代理机构信息</strong></p>
-                                <p>名 称：新疆世纪星工程咨询有限公司</p>
-                                <p>地 址：乌鲁木齐经济技术开发区二期黄山街一品九点阳光德港大厦 B 座 20 楼</p>
-                                <p>联系方式：0991-3678303</p>
-                                <p><strong>3. 项目联系方式</strong></p>
-                                <p>项目联系人：毛文静、郑倩如、訾王贝</p>
-                                <p>电 话：0991-3678303</p>
+                                <p><strong>采购人：</strong>新疆医科大学第一附属医院 0991-4362697</p>
+                                <p><strong>代理机构：</strong>新疆世纪星工程咨询有限公司 0991-3678303</p>
+                                <p><strong>项目联系人：</strong>毛文静、郑倩如、訾王贝</p>
                             </div>
                             
                             <div class="attachment-box">
-                                <p>📎 附件信息</p>
-                                <p>（发售版）招标文件新疆医科大学第一附属医院牙科显微镜采购项目（二次）.docx（730.3K）</p>
+                                <p>📎 附件</p>
+                                <p>招标文件.docx（730.3K）</p>
                             </div>
                         </div>
                     </div>
@@ -187,73 +101,55 @@
             
             <div class="accordion-item" id="item-2">
                 <div class="accordion-header" onclick="toggleItem('item-2')">
-                    <div class="accordion-title">新疆医科大学第一附属医院牙科治疗椅采购项目（二次）公开招标公告</div>
+                    <div class="accordion-title">新疆医科大学第一附属医院牙科治疗椅采购项目（二次）</div>
                     <div class="accordion-icon">▼</div>
                 </div>
                 <div class="accordion-meta">
-                    <span>📍 新疆</span><span>💰 预算：240,000 元</span><span>⏰ 截止：2026-06-01 11:00</span><span class="tag">公开招标</span>
+                    <span>📍 新疆</span><span>💰 240,000 元</span><span>⏰ 06-01 截止</span><span class="tag">公开招标</span>
                     <a href="https://www.bidcenter.com.cn/news-417517696-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
                 </div>
                 <div class="accordion-content">
                     <div class="content-inner">
                         <div class="detail-section"><div class="detail-grid">
                             <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">SJX-2025-721-02</span></div>
-                            <div class="detail-item"><span class="detail-label">采购方式</span><span class="detail-value">公开招标</span></div>
-                            <div class="detail-item"><span class="detail-label">预算金额</span><span class="detail-value">240,000 元</span></div>
-                            <div class="detail-item"><span class="detail-label">最高限价</span><span class="detail-value">220,000 元</span></div>
-                            <div class="detail-item"><span class="detail-label">采购数量</span><span class="detail-value">2 套</span></div>
+                            <div class="detail-item"><span class="detail-label">预算</span><span class="detail-value">240,000 元</span></div>
+                            <div class="detail-item"><span class="detail-label">限价</span><span class="detail-value">220,000 元</span></div>
+                            <div class="detail-item"><span class="detail-label">数量</span><span class="detail-value">2 套</span></div>
                         </div></div>
                         <div class="detail-content">
                             <h4 class="detail-title">一、项目基本情况</h4>
-                            <p><strong>项目编号：</strong>SJX-2025-721-02</p>
                             <p><strong>项目名称：</strong>新疆医科大学第一附属医院牙科治疗椅采购项目（二次）</p>
                             <p><strong>采购方式：</strong>公开招标</p>
                             <p><strong>预算金额：</strong>240,000 元</p>
                             <p><strong>最高限价：</strong>220,000 元</p>
-                            <p><strong>采购需求：</strong>标项名称：新疆医科大学第一附属医院牙科治疗椅采购项目（二次），数量：2，预算金额：240,000 元，单位：套，简要规格描述：牙科治疗椅采购，详见本项目采购需求。</p>
-                            <p><strong>合同履行期限：</strong>自合同签订之日起 30 天内，将标的物运送至甲方指定地点，并负责完成安装调试，配合甲方完成验收。</p>
-                            <p><strong>本项目（否）接受联合体投标：</strong>否</p>
+                            <p><strong>采购需求：</strong>牙科治疗椅采购，数量：2 套</p>
+                            <p><strong>合同履行期限：</strong>合同签订后 30 天内</p>
                             
-                            <h4 class="detail-title">二、申请人的资格要求</h4>
+                            <h4 class="detail-title">二、申请人资格要求</h4>
                             <ul class="detail-list">
-                                <li>满足《中华人民共和国政府采购法》第二十二条规定；</li>
-                                <li>落实政府采购政策需满足的资格要求：标项 1：本项目专门面向中小企业采购；</li>
-                                <li>本项目的特定资格要求：【标项 1】投标人具有医疗器械经营资格，属于医疗器械管理的产品需根据《医疗器械监督管理条例》(国务院令第 650 号) 有关内容办理医疗器产品注册或备案。</li>
+                                <li>满足《政府采购法》第二十二条规定</li>
+                                <li>本项目专门面向中小企业采购</li>
+                                <li>投标人具有医疗器械经营资格</li>
                             </ul>
                             
                             <h4 class="detail-title">三、获取招标文件</h4>
-                            <p><strong>时间：</strong>2026 年 05 月 07 日至 2026 年 05 月 13 日，每天上午 00:00 至 14:00，下午 14:00 至 23:59（北京时间，法定节假日除外）</p>
+                            <p><strong>时间：</strong>2026 年 05 月 07 日至 05 月 13 日</p>
                             <p><strong>地点：</strong>政采云平台线上</p>
-                            <p><strong>方式：</strong>供应商登录政采云平台 https://www.zcygov.cn/ 在线申请获取采购文件。</p>
                             <p><strong>售价：</strong>0 元</p>
                             
-                            <h4 class="detail-title">四、提交投标文件截止时间、开标时间和地点</h4>
-                            <p><strong>截止时间：</strong>2026 年 06 月 01 日 11:00（北京时间）</p>
-                            <p><strong>投标地点：</strong>请登录政采云投标客户端投标</p>
-                            <p><strong>开标时间：</strong>2026 年 06 月 01 日 11:00（北京时间）</p>
-                            <p><strong>开标地点：</strong>投标人登录政采云平台 https://www.zcygov.cn/，进入"项目采购 - 开标评标"进入开标大厅。</p>
+                            <h4 class="detail-title">四、投标文件递交</h4>
+                            <p><strong>截止时间：</strong>2026 年 06 月 01 日 11:00</p>
+                            <p><strong>开标地点：</strong>政采云平台</p>
                             
-                            <h4 class="detail-title">五、公告期限</h4>
-                            <p>自本公告发布之日起 5 个工作日。</p>
-                            
-                            <h4 class="detail-title">六、对本次采购提出询问，请按以下方式联系</h4>
+                            <h4 class="detail-title">五、联系方式</h4>
                             <div class="contact-info">
-                                <p><strong>1. 采购人信息</strong></p>
-                                <p>名 称：新疆医科大学第一附属医院</p>
-                                <p>地 址：乌鲁木齐市新市区鲤鱼山南路 137 号</p>
-                                <p>联系方式：0991-4362391</p>
-                                <p><strong>2. 采购代理机构信息</strong></p>
-                                <p>名 称：新疆世纪星工程咨询有限公司</p>
-                                <p>地 址：乌鲁木齐经济技术开发区二期黄山街一品九点阳光德港大厦 B 座 20 楼</p>
-                                <p>联系方式：0991-3678303</p>
-                                <p><strong>3. 项目联系方式</strong></p>
-                                <p>项目联系人：毛文静、郑倩如、訾王贝</p>
-                                <p>电 话：0991-3678303</p>
+                                <p><strong>采购人：</strong>新疆医科大学第一附属医院 0991-4362391</p>
+                                <p><strong>代理机构：</strong>新疆世纪星工程咨询有限公司 0991-3678303</p>
                             </div>
                             
                             <div class="attachment-box">
-                                <p>📎 附件信息</p>
-                                <p>（发售版）招标文件 - 新疆医科大学第一附属医院牙科治疗椅采购项目（二次）.docx（741.3K）</p>
+                                <p>📎 附件</p>
+                                <p>招标文件.docx（741.3K）</p>
                             </div>
                         </div>
                     </div>
@@ -262,11 +158,11 @@
             
             <div class="accordion-item" id="item-3">
                 <div class="accordion-header" onclick="toggleItem('item-3')">
-                    <div class="accordion-title">南宁市第一人民医院互联网医院管理办公室采购办公家具竞价公告</div>
+                    <div class="accordion-title">南宁市第一人民医院互联网医院管理办公室采购办公家具</div>
                     <div class="accordion-icon">▼</div>
                 </div>
                 <div class="accordion-meta">
-                    <span>📍 广西</span><span>💰 金额：4,600 元</span><span>⏰ 截止：2026-05-12 09:00</span><span class="tag">竞价采购</span>
+                    <span>📍 广西</span><span>💰 4,600 元</span><span>⏰ 05-12 截止</span><span class="tag">竞价采购</span>
                     <a href="https://www.bidcenter.com.cn/news-417517338-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
                 </div>
                 <div class="accordion-content">
@@ -274,38 +170,31 @@
                         <div class="detail-section"><div class="detail-grid">
                             <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">62026050765120509</span></div>
                             <div class="detail-item"><span class="detail-label">采购单位</span><span class="detail-value">南宁市第一人民医院</span></div>
-                            <div class="detail-item"><span class="detail-label">报价时间</span><span class="detail-value">2026-05-12 09:00-09:46</span></div>
+                            <div class="detail-item"><span class="detail-label">报价时间</span><span class="detail-value">05-12 09:00-09:46</span></div>
                         </div></div>
                         <div class="detail-content">
                             <h4 class="detail-title">一、项目信息</h4>
                             <p><strong>项目名称：</strong>南宁市第一人民医院互联网医院管理办公室采购办公家具</p>
                             <p><strong>项目编号：</strong>62026050765120509</p>
-                            <p><strong>项目联系人及联系方式：</strong>吴昊 19195834793</p>
-                            <p><strong>报价起止时间：</strong>2026-05-12 09:00 - 2026-05-12 09:46</p>
-                            <p><strong>采购单位：</strong>南宁市第一人民医院</p>
-                            <p><strong>供应商资质要求：</strong>1、符合《中华人民共和国政府采购法》第二十二条的规定。2、符合《关于规范政府采购供应商资格设定及资格审查的通知》第六条规定。3、已在本系统注册并通过资质初审的供应商。</p>
+                            <p><strong>联系人：</strong>吴昊 19195834793</p>
+                            <p><strong>报价时间：</strong>2026-05-12 09:00 - 09:46</p>
                             
-                            <h4 class="detail-title">二、采购需求清单</h4>
+                            <h4 class="detail-title">二、采购需求</h4>
                             <table class="detail-table">
-                                <tr><th>商品名称</th><th>参数要求</th><th>购买数量</th><th>控制金额</th><th>意向品牌</th></tr>
-                                <tr><td>折叠桌</td><td>核心参数要求：商品类目：办公桌；参数：尺寸 1.2×0.6m、木板厚度≥15mm，免漆板、防水防潮、烤漆黑色框架金属包边简易折叠桌</td><td>20 张</td><td>4,600.00</td><td>-</td></tr>
+                                <tr><th>商品</th><th>参数</th><th>数量</th><th>金额</th></tr>
+                                <tr><td>折叠桌</td><td>尺寸 1.2×0.6m、木板厚度≥15mm，免漆板、防水防潮</td><td>20 张</td><td>4,600 元</td></tr>
                             </table>
-                            <p><strong>买家留言：</strong>以我方实际需求为准，如有不符我方有权取消订单</p>
-                            <p><strong>附件：</strong>折叠桌参考样式.png</p>
-                            <p><strong>响应附件要求：</strong>产品参数加盖公章上传</p>
                             
                             <h4 class="detail-title">三、收货信息</h4>
-                            <p><strong>送货方式：</strong>送货上门</p>
-                            <p><strong>送货时间：</strong>工作日 09:00-17:00</p>
-                            <p><strong>送货期限：</strong>竞价成交后 3 个工作日内</p>
-                            <p><strong>送货地址：</strong>广西壮族自治区南宁市青秀区中山街道七星路 89 号南宁市第一人民医院</p>
+                            <p><strong>送货地址：</strong>南宁市青秀区七星路 89 号</p>
+                            <p><strong>送货期限：</strong>成交后 3 个工作日内</p>
                             
                             <h4 class="detail-title">四、商务要求</h4>
-                            <p><strong>质量保证：</strong>1.供应商所提供的货物型号、技术规格、技术参数等质量必须与本次采购要求和承诺相一致。2.供应商所提供的货物必须是全新、未使用的原装产品。3.供应商所投标的产品如有计算机、打印机、空调等财库〔2019〕19 号文规定的环保、节能产品政府采购品目清单中产品，须符合国家相关环保节能要求，并达到国家二级或以上能效（水效）标准。</p>
-                            <p><strong>售后服务：</strong>按国家有关产品"三包"规定执行"三包"，所提供的货物必须是全新的合格产品，保修期至少 1 年（免费保修期从货物验收合格之日起计算）</p>
+                            <p><strong>质量保证：</strong>全新原装产品，符合环保节能要求</p>
+                            <p><strong>售后服务：</strong>按国家"三包"规定，保修期至少 1 年</p>
                             
                             <div class="contact-info">
-                                <p><strong>注意事项：</strong>1、如成交供应商未与采购人沟通、未经采购人同意、未告知采购人送货方式等情况下，直接以快递方式发送货物，如出现货物丢失、货物损坏、货物长时间未接收等一系列问题，全部由成交供应商负责；2、一旦发现虚假响应，即使确认成交也将被取消供货资格，采购人有权追究恶意扰乱规则的供应商责任，并向政府采购监管平台投诉。</p>
+                                <p><strong>注意事项：</strong>需提前沟通送货方式，虚假响应将被取消资格</p>
                             </div>
                         </div>
                     </div>
@@ -314,11 +203,11 @@
             
             <div class="accordion-item" id="item-4">
                 <div class="accordion-header" onclick="toggleItem('item-4')">
-                    <div class="accordion-title">东莞市水乡中心医院智慧健康核心数据采集接口改造服务采购公告</div>
+                    <div class="accordion-title">东莞市水乡中心医院智慧健康核心数据采集接口改造</div>
                     <div class="accordion-icon">▼</div>
                 </div>
                 <div class="accordion-meta">
-                    <span>📍 广东</span><span>💰 限价：62,000 元</span><span>⏰ 截止：2026-05-11</span><span class="tag">询价采购</span>
+                    <span>📍 广东</span><span>💰 62,000 元</span><span>⏰ 05-11 截止</span><span class="tag">询价采购</span>
                     <a href="https://www.bidcenter.com.cn/news-417502955-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
                 </div>
                 <div class="accordion-content">
@@ -326,40 +215,30 @@
                         <div class="detail-section"><div class="detail-grid">
                             <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">SXZX-CG-260502</span></div>
                             <div class="detail-item"><span class="detail-label">采购方式</span><span class="detail-value">询价采购</span></div>
-                            <div class="detail-item"><span class="detail-label">最高限价</span><span class="detail-value">62,000 元</span></div>
-                            <div class="detail-item"><span class="detail-label">采购内容</span><span class="detail-value">智慧健康核心数据采集接口改造服务 1 项</span></div>
+                            <div class="detail-item"><span class="detail-label">限价</span><span class="detail-value">62,000 元</span></div>
                         </div></div>
                         <div class="detail-content">
-                            <h4 class="detail-title">一、项目名称</h4>
+                            <h4 class="detail-title">一、项目概况</h4>
                             <p><strong>项目名称：</strong>智慧健康核心数据采集接口改造服务</p>
-                            <p><strong>项目编号：</strong>SXZX-CG-260502</p>
                             <p><strong>采购内容：</strong>智慧健康核心数据采集接口改造服务 1 项</p>
-                            <p><strong>总价最高限价：</strong>62,000 元</p>
+                            <p><strong>最高限价：</strong>62,000 元</p>
                             
                             <h4 class="detail-title">二、采购方式</h4>
-                            <p>本项目采用询价采购，即参加项目询价的供应商，在规定的时间前将密封的报价表提交至采购办公室，由采购办公室工作人员按时拆封，<strong>报价最低</strong>的供应商确定为成交供应商。</p>
+                            <p>询价采购，报价最低的供应商确定为成交供应商。</p>
                             
                             <h4 class="detail-title">三、供应商资格</h4>
-                            <p>供应商须具备《中华人民共和国政府采购法》第二十二条规定的条件以提供"响应供应商资格声明函"为准）；本项目不接受联合体投标。</p>
+                            <p>须具备《政府采购法》第二十二条规定的条件，本项目不接受联合体投标。</p>
                             
-                            <h4 class="detail-title">四、供应商须提供如下材料</h4>
-                            <ul class="detail-list">
-                                <li>1.采购项目报名表加盖公章</li>
-                                <li>2.企业营业执照复印件加盖公章</li>
-                                <li>3.响应报价单加盖公章并密封</li>
-                            </ul>
+                            <h4 class="detail-title">四、报名及提交文件</h4>
+                            <p><strong>时间：</strong>2026 年 5 月 7 日至 5 月 11 日（工作日 8:00-12:00、14:30-17:00）</p>
+                            <p><strong>地点：</strong>东莞市水乡中心医院 2 号楼四楼 405 采购办</p>
                             
-                            <h4 class="detail-title">五、报名及提交响应文件截止时间</h4>
-                            <p>符合资格的供应商应当在 2026 年 5 月 7 日至 2026 年 5 月 11 日期间（工作日上午 8:00-12:00、下午 2:30—5:00，周六上午 8:00-11:00）到东莞市水乡中心医院 2 号楼四楼 405 采购办报名并提交资料。</p>
-                            
-                            <h4 class="detail-title">六、开评标时间</h4>
+                            <h4 class="detail-title">五、开评标时间</h4>
                             <p>2026 年 5 月 12 日</p>
                             
                             <div class="contact-info">
-                                <p><strong>采购单位：</strong>东莞市水乡中心医院采购办</p>
+                                <p><strong>联系人：</strong>廖先生 0769-88829569</p>
                                 <p><strong>地址：</strong>东莞市麻涌镇东环路 10 号</p>
-                                <p><strong>联系人：</strong>廖先生</p>
-                                <p><strong>联系电话：</strong>0769-88829569</p>
                             </div>
                         </div>
                     </div>
@@ -368,49 +247,43 @@
             
             <div class="accordion-item" id="item-5">
                 <div class="accordion-header" onclick="toggleItem('item-5')">
-                    <div class="accordion-title">中山火炬开发区人民医院信息化项目监理服务采购公告</div>
+                    <div class="accordion-title">中山火炬开发区人民医院信息化项目监理服务</div>
                     <div class="accordion-icon">▼</div>
                 </div>
                 <div class="accordion-meta">
-                    <span>📍 广东</span><span>💰 投资：468.68 万元</span><span>⏰ 截止：2026-05-11 09:00</span><span class="tag">监理服务</span>
+                    <span>📍 广东</span><span>💰 468.68 万元</span><span>⏰ 05-11 截止</span><span class="tag">监理服务</span>
                     <a href="https://www.bidcenter.com.cn/news-417498305-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
                 </div>
                 <div class="accordion-content">
                     <div class="content-inner">
                         <div class="detail-section"><div class="detail-grid">
-                            <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">4420000034572664582605061885</span></div>
-                            <div class="detail-item"><span class="detail-label">投资额</span><span class="detail-value">4,686,800 元</span></div>
-                            <div class="detail-item"><span class="detail-label">服务金额</span><span class="detail-value">67,300 元</span></div>
+                            <div class="detail-item"><span class="detail-label">投资额</span><span class="detail-value">468.68 万元</span></div>
+                            <div class="detail-item"><span class="detail-label">监理费</span><span class="detail-value">6.73 万元</span></div>
                             <div class="detail-item"><span class="detail-label">下浮率</span><span class="detail-value">1%-30%</span></div>
-                            <div class="detail-item"><span class="detail-label">服务期限</span><span class="detail-value">1 年</span></div>
+                            <div class="detail-item"><span class="detail-label">服务期</span><span class="detail-value">1 年</span></div>
                         </div></div>
                         <div class="detail-content">
                             <h4 class="detail-title">一、项目概况</h4>
-                            <p><strong>采购项目名称：</strong>中山火炬开发区人民医院信息化项目监理服务</p>
-                            <p><strong>项目业主：</strong>中山火炬开发区人民医院</p>
-                            <p><strong>投资额：</strong>4,686,800.00 元</p>
+                            <p><strong>项目名称：</strong>中山火炬开发区人民医院信息化项目监理服务</p>
+                            <p><strong>投资额：</strong>468.68 万元</p>
                             <p><strong>所需服务：</strong>信息系统工程监理</p>
                             
                             <h4 class="detail-title">二、服务内容</h4>
                             <ul class="detail-list">
-                                <li>一、监理机构须依照有关标准和法律法规以及采购人的需求，提供实施阶段和验收阶段的监理服务。包括但不限于项目实施及验收过程的质量、进度、投资金额控制、项目安全生产和工期目标的监督管理、合同、信息等方面的协调管理。</li>
-                                <li>二、1.提供驻点服务;2.监理人员非因采购人要求或其他特殊情况，原则上不得随意更换;3.审核和确认项目整体设计，组织及实施方案的总体把关;4.质量控制;5.技术培训质量控制;6.进度控制;7.投资控制。</li>
-                                <li>三、监理团队不少于 3 人，至少包括总监理工程师 1 名、总监理工程师代表 1 名、现场监理项目师 1 名。</li>
+                                <li>提供实施阶段和验收阶段的监理服务</li>
+                                <li>提供驻点服务</li>
+                                <li>监理团队不少于 3 人（总监 1 名、总监代表 1 名、现场监理 1 名）</li>
                             </ul>
                             
                             <h4 class="detail-title">三、服务金额</h4>
-                            <p>本项目采用下浮率方式报价，服务价格基准计价标准（最高限价）为人民币 67,300.00 元，有效报价下浮率区间为 1%（含）至 30%（含）。报价人在上述有效区间内自主填报唯一下浮率，服务期内下浮率不作调整；最终结算服务金额 = 基准计价标准 × (1 - 最终成交下浮率)，最终结算金额不超过本项目最高限价。</p>
+                            <p>基准计价标准 67,300 元，下浮率 1%-30%，最终结算金额=基准价×(1-下浮率)</p>
                             
-                            <h4 class="detail-title">四、选取中介服务机构方式</h4>
+                            <h4 class="detail-title">四、选取方式</h4>
                             <p>方案择优选取</p>
                             
-                            <h4 class="detail-title">五、服务时限说明</h4>
-                            <p>自签订合同之日起，服务期为 1 年或子项目合同金额累计达到本项目预算金额止，以先到者为期限。合同服务到期，合同约定的所有条款对未完成的子项目监理服务合同继续有效。</p>
-                            
                             <div class="contact-info">
-                                <p><strong>截止报价时间：</strong>2026-05-09 17:30</p>
-                                <p><strong>选取中介时间：</strong>2026-05-11 09:00</p>
-                                <p><strong>业主单位咨询电话：</strong>中山火炬开发区人民医院（登录后查看）</p>
+                                <p><strong>截止报价：</strong>2026-05-09 17:30</p>
+                                <p><strong>选取时间：</strong>2026-05-11 09:00</p>
                             </div>
                         </div>
                     </div>
@@ -419,63 +292,51 @@
             
             <div class="accordion-item" id="item-6">
                 <div class="accordion-header" onclick="toggleItem('item-6')">
-                    <div class="accordion-title">建行重庆市分行石柱土家族自治县人民医院"智慧医院"建设项目供应商征集公告</div>
+                    <div class="accordion-title">建行重庆市分行石柱县医院"智慧医院"建设项目供应商征集</div>
                     <div class="accordion-icon">▼</div>
                 </div>
                 <div class="accordion-meta">
-                    <span>📍 重庆</span><span>📋 类型：供应商征集</span><span>⏰ 截止：2026-05-12 17:00</span><span class="tag">征集公告</span>
+                    <span>📍 重庆</span><span>📋 供应商征集</span><span>⏰ 05-12 截止</span><span class="tag">征集公告</span>
                     <a href="https://www.bidcenter.com.cn/news-417492273-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
                 </div>
                 <div class="accordion-content">
                     <div class="content-inner">
                         <div class="detail-section"><div class="detail-grid">
                             <div class="detail-item"><span class="detail-label">征集类型</span><span class="detail-value">供应商征集</span></div>
-                            <div class="detail-item"><span class="detail-label">征集单位</span><span class="detail-value">中国建设银行重庆市分行</span></div>
-                            <div class="detail-item"><span class="detail-label">截止时间</span><span class="detail-value">2026-05-12 17:00</span></div>
+                            <div class="detail-item"><span class="detail-label">征集单位</span><span class="detail-value">建行重庆市分行</span></div>
+                            <div class="detail-item"><span class="detail-label">截止</span><span class="detail-value">05-12 17:00</span></div>
                         </div></div>
                         <div class="detail-content">
                             <h4 class="detail-title">一、采购需求</h4>
-                            <p>采购需求见附件。注：最终项目需求以邀请书为准（如成为候选供应商，可在系统内收取邀请书，未成为候选供应商不再另行通知）</p>
+                            <p>石柱土家族自治县人民医院"智慧医院"建设项目，最终需求以邀请书为准。</p>
                             
                             <h4 class="detail-title">二、征集时间</h4>
-                            <p>本次供应商征集自即日起至 2026 年 5 月 12 日 17:00 止</p>
+                            <p>即日起至 2026 年 5 月 12 日 17:00 止</p>
                             
                             <h4 class="detail-title">三、报名资格要求</h4>
                             <ul class="detail-list">
-                                <li>1. 投标人为中华人民共和国境内合法注册的民事主体，具有独立承担民事责任的能力，遵守国家有关法律、法规，具有良好的商业信誉。有依法缴纳税收和社会保障资金的良好记录。</li>
-                                <li>2.供应商当前未处于限制开展生产经营活动、责令停产停业、责令关闭、限制从业等重大行政处罚期内。</li>
-                                <li>3.供应商当前未被"信用中国"网站列入重大税收违法失信主体；未被"中国执行信息公开网"列入失信被执行人名单；未被"中国政府采购网"列入政府采购严重违法失信行为记录名单；未被"国家企业信用信息公示系统"网站列入严重违法失信名单。</li>
-                                <li>4.法定代表人（负责人）为同一人或存在控股、管理关系的不同申请人，不得同时参加本项目。</li>
-                                <li>5.供应商与建设银行不存在利益冲突，不存在损害建设银行合法利益和声誉的情形，不存在针对建设银行的重大诚信问题。</li>
-                                <li>6. 投标人在投标时未处于建设银行总行或分行供应商不良行为处罚期内，不良行为处罚包括：暂停合作、禁用、退出等情形。</li>
-                                <li>7.供应商承诺在本项目采购过程中不存在下列情形，如存在下列情形之一，建设银行有权取消其候选资格。情形包括但不限于：（1）法定代表人（负责人）在生产经营活动中受到刑事处罚；（2）重大并购或重组，影响正常生产经营；（3）其他重大风险事项，影响正常采购合作。</li>
-                                <li>8.本项目不接受联合体报名申请。</li>
-                                <li>9.项目特定要求：具备丰富的行业服务经验，拥有一个及以上医疗设备供应实施案例（提供合同）。</li>
+                                <li>合法注册的民事主体，具有独立承担民事责任的能力</li>
+                                <li>未被列入失信名单</li>
+                                <li>具备丰富的行业服务经验</li>
+                                <li>拥有一个及以上医疗设备供应实施案例（提供合同）</li>
+                                <li>本项目不接受联合体报名</li>
                             </ul>
                             
                             <h4 class="detail-title">四、报名所需材料</h4>
                             <ul class="detail-list">
-                                <li>1. 提供一个及以上医疗设备供应实施案例（提供合同）。</li>
-                                <li>2.《集中采购供应商行为规范承诺书》（格式见附件）。（报名时附件上传盖章扫描件）</li>
-                                <li>3.《采购参与意向反馈函》（格式见附件）。（报名时附件上传盖章扫描件）（反馈的联系人必须要是龙集采系统联系人且实名认证）</li>
-                                <li>4.《报名供应商信息表》（格式见附件）（报名时附件上传 EXCEL 文件）</li>
-                                <li>5.供应商当前未被"信用中国"网站列入税收违法黑名单；未被"中国执行信息公开网"列入失信被执行人名单；未被"中国政府采购网"列入政府采购严重违法失信行为记录名单；未被"国家企业信用信息公示系统"网站列入严重违法失信名单，提供相应网站查询结果截图等。（报名时附件上传截图）</li>
+                                <li>医疗设备供应实施案例合同</li>
+                                <li>《集中采购供应商行为规范承诺书》</li>
+                                <li>《采购参与意向反馈函》</li>
+                                <li>《报名供应商信息表》</li>
+                                <li>信用查询截图</li>
                             </ul>
                             
-                            <h4 class="detail-title">五、报名步骤</h4>
-                            <p>报名供应商均需在我行网站 ibuy.ccb.com（不需要登录，如已登录可能看不到供应商征集栏，请退出登录），点击页面上方的"供应商征集"，进入页面后，搜索项目关键词，找到该征集公告，并点击公告最下方蓝色按钮（征集报名），点击登录后，填写相关信息并上传附件后提交，页面显示报名成功即可。</p>
+                            <h4 class="detail-title">五、报名方式</h4>
+                            <p>登录建设银行采购平台 <strong>ibuy.ccb.com</strong> 进行报名</p>
                             
-                            <h4 class="detail-title">六、联系方式</h4>
                             <div class="contact-info">
-                                <p><strong>1.需求描述不清晰，与市场情况不符等需求类问题</strong></p>
-                                <p>需求部门联系人：郑老师</p>
-                                <p>联系电话：（023）63771334</p>
-                                <p><strong>2. 供应商资质、报名材料问题</strong></p>
-                                <p>采购部门联系人：余老师、刘老师</p>
-                                <p>联系电话：（023）63771695 63771466</p>
-                                <p>电子邮件：yuwei.cq@ccb.com、liuxin2.cq@ccb.com</p>
-                                <p><strong>3.系统操作问题、企业注册审批、操作故障类问题</strong></p>
-                                <p>联系电话：400-918-1908</p>
+                                <p><strong>需求部门：</strong>郑老师 023-63771334</p>
+                                <p><strong>采购部门：</strong>余老师、刘老师 023-63771695</p>
                             </div>
                         </div>
                     </div>
@@ -489,21 +350,10 @@
     </div>
     
     <script>
-        function toggleItem(id) {
-            const item = document.getElementById(id);
-            const isActive = item.classList.contains('active');
-            document.querySelectorAll('.accordion-item.active').forEach(i => { if (i.id !== id) i.classList.remove('active'); });
-            item.classList.toggle('active');
-        }
-        function expandAll(e) {
-            const section = e.target.closest('.section');
-            section.querySelectorAll('.accordion-item').forEach(item => item.classList.add('active'));
-        }
-        function collapseAll(e) {
-            const section = e.target.closest('.section');
-            section.querySelectorAll('.accordion-item').forEach(item => item.classList.remove('active'));
-        }
-        document.addEventListener('keydown', e => { if (e.key === 'Escape') document.querySelectorAll('.accordion-item.active').forEach(i => i.classList.remove('active')); });
+        function toggleItem(id){const i=document.getElementById(id),a=i.classList.contains('active');document.querySelectorAll('.accordion-item.active').forEach(x=>{if(x.id!==id)x.classList.remove('active')});i.classList.toggle('active')}
+        function expandAll(e){e.target.closest('.section').querySelectorAll('.accordion-item').forEach(i=>i.classList.add('active'))}
+        function collapseAll(e){e.target.closest('.section').querySelectorAll('.accordion-item').forEach(i=>i.classList.remove('active'))}
+        document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.accordion-item.active').forEach(i=>i.classList.remove('active'))});
     </script>
 </body>
 </html>
