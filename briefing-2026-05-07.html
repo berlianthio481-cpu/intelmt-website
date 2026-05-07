@@ -41,7 +41,7 @@
         .accordion-link { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; text-decoration: none; border-radius: 20px; font-size: 12px; white-space: nowrap; margin-left: 10px; }
         .accordion-item.active .accordion-link { background: #fff; color: #667eea; }
         .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #fff; }
-        .accordion-item.active .accordion-content { max-height: 5000px; }
+        .accordion-item.active .accordion-content { max-height: 600px; overflow-y: auto; }
         .content-inner { padding: 25px; border-top: 1px solid #e9ecef; }
         .detail-section { background: #f8f9fa; border-radius: 8px; padding: 15px; margin-bottom: 20px; }
         .detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
@@ -65,6 +65,13 @@
         .attachment-box p { color: #f57c00; font-weight: 600; }
         .footer { background: #f8f9fa; padding: 20px 30px; text-align: center; font-size: 13px; color: #6c757d; }
         .footer a { color: #667eea; text-decoration: none; }
+        
+        /* 自定义滚动条 */
+        .accordion-content::-webkit-scrollbar { width: 6px; }
+        .accordion-content::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 3px; }
+        .accordion-content::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 3px; }
+        .accordion-content::-webkit-scrollbar-thumb:hover { background: #a1a1a1; }
+        
         @media (max-width: 768px) { .stats { grid-template-columns: repeat(4, 1fr); } .section { padding: 20px 15px; } .accordion-header { flex-direction: column; gap: 10px; } .accordion-link { margin-left: 0; margin-top: 10px; } }
         @media (max-width: 480px) { .stats { grid-template-columns: repeat(2, 1fr); } .header h1 { font-size: 22px; } }
     </style>
@@ -299,6 +306,176 @@
                             
                             <div class="contact-info">
                                 <p><strong>注意事项：</strong>1、如成交供应商未与采购人沟通、未经采购人同意、未告知采购人送货方式等情况下，直接以快递方式发送货物，如出现货物丢失、货物损坏、货物长时间未接收等一系列问题，全部由成交供应商负责；2、一旦发现虚假响应，即使确认成交也将被取消供货资格，采购人有权追究恶意扰乱规则的供应商责任，并向政府采购监管平台投诉。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item" id="item-4">
+                <div class="accordion-header" onclick="toggleItem('item-4')">
+                    <div class="accordion-title">东莞市水乡中心医院智慧健康核心数据采集接口改造服务采购公告</div>
+                    <div class="accordion-icon">▼</div>
+                </div>
+                <div class="accordion-meta">
+                    <span>📍 广东</span><span>💰 限价：62,000 元</span><span>⏰ 截止：2026-05-11</span><span class="tag">询价采购</span>
+                    <a href="https://www.bidcenter.com.cn/news-417502955-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
+                </div>
+                <div class="accordion-content">
+                    <div class="content-inner">
+                        <div class="detail-section"><div class="detail-grid">
+                            <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">SXZX-CG-260502</span></div>
+                            <div class="detail-item"><span class="detail-label">采购方式</span><span class="detail-value">询价采购</span></div>
+                            <div class="detail-item"><span class="detail-label">最高限价</span><span class="detail-value">62,000 元</span></div>
+                            <div class="detail-item"><span class="detail-label">采购内容</span><span class="detail-value">智慧健康核心数据采集接口改造服务 1 项</span></div>
+                        </div></div>
+                        <div class="detail-content">
+                            <h4 class="detail-title">一、项目名称</h4>
+                            <p><strong>项目名称：</strong>智慧健康核心数据采集接口改造服务</p>
+                            <p><strong>项目编号：</strong>SXZX-CG-260502</p>
+                            <p><strong>采购内容：</strong>智慧健康核心数据采集接口改造服务 1 项</p>
+                            <p><strong>总价最高限价：</strong>62,000 元</p>
+                            
+                            <h4 class="detail-title">二、采购方式</h4>
+                            <p>本项目采用询价采购，即参加项目询价的供应商，在规定的时间前将密封的报价表提交至采购办公室，由采购办公室工作人员按时拆封，<strong>报价最低</strong>的供应商确定为成交供应商。</p>
+                            
+                            <h4 class="detail-title">三、供应商资格</h4>
+                            <p>供应商须具备《中华人民共和国政府采购法》第二十二条规定的条件以提供"响应供应商资格声明函"为准）；本项目不接受联合体投标。</p>
+                            
+                            <h4 class="detail-title">四、供应商须提供如下材料</h4>
+                            <ul class="detail-list">
+                                <li>1.采购项目报名表加盖公章</li>
+                                <li>2.企业营业执照复印件加盖公章</li>
+                                <li>3.响应报价单加盖公章并密封</li>
+                            </ul>
+                            
+                            <h4 class="detail-title">五、报名及提交响应文件截止时间</h4>
+                            <p>符合资格的供应商应当在 2026 年 5 月 7 日至 2026 年 5 月 11 日期间（工作日上午 8:00-12:00、下午 2:30—5:00，周六上午 8:00-11:00）到东莞市水乡中心医院 2 号楼四楼 405 采购办报名并提交资料。</p>
+                            
+                            <h4 class="detail-title">六、开评标时间</h4>
+                            <p>2026 年 5 月 12 日</p>
+                            
+                            <div class="contact-info">
+                                <p><strong>采购单位：</strong>东莞市水乡中心医院采购办</p>
+                                <p><strong>地址：</strong>东莞市麻涌镇东环路 10 号</p>
+                                <p><strong>联系人：</strong>廖先生</p>
+                                <p><strong>联系电话：</strong>0769-88829569</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item" id="item-5">
+                <div class="accordion-header" onclick="toggleItem('item-5')">
+                    <div class="accordion-title">中山火炬开发区人民医院信息化项目监理服务采购公告</div>
+                    <div class="accordion-icon">▼</div>
+                </div>
+                <div class="accordion-meta">
+                    <span>📍 广东</span><span>💰 投资：468.68 万元</span><span>⏰ 截止：2026-05-11 09:00</span><span class="tag">监理服务</span>
+                    <a href="https://www.bidcenter.com.cn/news-417498305-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
+                </div>
+                <div class="accordion-content">
+                    <div class="content-inner">
+                        <div class="detail-section"><div class="detail-grid">
+                            <div class="detail-item"><span class="detail-label">项目编号</span><span class="detail-value">4420000034572664582605061885</span></div>
+                            <div class="detail-item"><span class="detail-label">投资额</span><span class="detail-value">4,686,800 元</span></div>
+                            <div class="detail-item"><span class="detail-label">服务金额</span><span class="detail-value">67,300 元</span></div>
+                            <div class="detail-item"><span class="detail-label">下浮率</span><span class="detail-value">1%-30%</span></div>
+                            <div class="detail-item"><span class="detail-label">服务期限</span><span class="detail-value">1 年</span></div>
+                        </div></div>
+                        <div class="detail-content">
+                            <h4 class="detail-title">一、项目概况</h4>
+                            <p><strong>采购项目名称：</strong>中山火炬开发区人民医院信息化项目监理服务</p>
+                            <p><strong>项目业主：</strong>中山火炬开发区人民医院</p>
+                            <p><strong>投资额：</strong>4,686,800.00 元</p>
+                            <p><strong>所需服务：</strong>信息系统工程监理</p>
+                            
+                            <h4 class="detail-title">二、服务内容</h4>
+                            <ul class="detail-list">
+                                <li>一、监理机构须依照有关标准和法律法规以及采购人的需求，提供实施阶段和验收阶段的监理服务。包括但不限于项目实施及验收过程的质量、进度、投资金额控制、项目安全生产和工期目标的监督管理、合同、信息等方面的协调管理。</li>
+                                <li>二、1.提供驻点服务;2.监理人员非因采购人要求或其他特殊情况，原则上不得随意更换;3.审核和确认项目整体设计，组织及实施方案的总体把关;4.质量控制;5.技术培训质量控制;6.进度控制;7.投资控制。</li>
+                                <li>三、监理团队不少于 3 人，至少包括总监理工程师 1 名、总监理工程师代表 1 名、现场监理项目师 1 名。</li>
+                            </ul>
+                            
+                            <h4 class="detail-title">三、服务金额</h4>
+                            <p>本项目采用下浮率方式报价，服务价格基准计价标准（最高限价）为人民币 67,300.00 元，有效报价下浮率区间为 1%（含）至 30%（含）。报价人在上述有效区间内自主填报唯一下浮率，服务期内下浮率不作调整；最终结算服务金额 = 基准计价标准 × (1 - 最终成交下浮率)，最终结算金额不超过本项目最高限价。</p>
+                            
+                            <h4 class="detail-title">四、选取中介服务机构方式</h4>
+                            <p>方案择优选取</p>
+                            
+                            <h4 class="detail-title">五、服务时限说明</h4>
+                            <p>自签订合同之日起，服务期为 1 年或子项目合同金额累计达到本项目预算金额止，以先到者为期限。合同服务到期，合同约定的所有条款对未完成的子项目监理服务合同继续有效。</p>
+                            
+                            <div class="contact-info">
+                                <p><strong>截止报价时间：</strong>2026-05-09 17:30</p>
+                                <p><strong>选取中介时间：</strong>2026-05-11 09:00</p>
+                                <p><strong>业主单位咨询电话：</strong>中山火炬开发区人民医院（登录后查看）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item" id="item-6">
+                <div class="accordion-header" onclick="toggleItem('item-6')">
+                    <div class="accordion-title">建行重庆市分行石柱土家族自治县人民医院"智慧医院"建设项目供应商征集公告</div>
+                    <div class="accordion-icon">▼</div>
+                </div>
+                <div class="accordion-meta">
+                    <span>📍 重庆</span><span>📋 类型：供应商征集</span><span>⏰ 截止：2026-05-12 17:00</span><span class="tag">征集公告</span>
+                    <a href="https://www.bidcenter.com.cn/news-417492273-1.html" target="_blank" class="accordion-link">🔗 登录网站查看详情</a>
+                </div>
+                <div class="accordion-content">
+                    <div class="content-inner">
+                        <div class="detail-section"><div class="detail-grid">
+                            <div class="detail-item"><span class="detail-label">征集类型</span><span class="detail-value">供应商征集</span></div>
+                            <div class="detail-item"><span class="detail-label">征集单位</span><span class="detail-value">中国建设银行重庆市分行</span></div>
+                            <div class="detail-item"><span class="detail-label">截止时间</span><span class="detail-value">2026-05-12 17:00</span></div>
+                        </div></div>
+                        <div class="detail-content">
+                            <h4 class="detail-title">一、采购需求</h4>
+                            <p>采购需求见附件。注：最终项目需求以邀请书为准（如成为候选供应商，可在系统内收取邀请书，未成为候选供应商不再另行通知）</p>
+                            
+                            <h4 class="detail-title">二、征集时间</h4>
+                            <p>本次供应商征集自即日起至 2026 年 5 月 12 日 17:00 止</p>
+                            
+                            <h4 class="detail-title">三、报名资格要求</h4>
+                            <ul class="detail-list">
+                                <li>1. 投标人为中华人民共和国境内合法注册的民事主体，具有独立承担民事责任的能力，遵守国家有关法律、法规，具有良好的商业信誉。有依法缴纳税收和社会保障资金的良好记录。</li>
+                                <li>2.供应商当前未处于限制开展生产经营活动、责令停产停业、责令关闭、限制从业等重大行政处罚期内。</li>
+                                <li>3.供应商当前未被"信用中国"网站列入重大税收违法失信主体；未被"中国执行信息公开网"列入失信被执行人名单；未被"中国政府采购网"列入政府采购严重违法失信行为记录名单；未被"国家企业信用信息公示系统"网站列入严重违法失信名单。</li>
+                                <li>4.法定代表人（负责人）为同一人或存在控股、管理关系的不同申请人，不得同时参加本项目。</li>
+                                <li>5.供应商与建设银行不存在利益冲突，不存在损害建设银行合法利益和声誉的情形，不存在针对建设银行的重大诚信问题。</li>
+                                <li>6. 投标人在投标时未处于建设银行总行或分行供应商不良行为处罚期内，不良行为处罚包括：暂停合作、禁用、退出等情形。</li>
+                                <li>7.供应商承诺在本项目采购过程中不存在下列情形，如存在下列情形之一，建设银行有权取消其候选资格。情形包括但不限于：（1）法定代表人（负责人）在生产经营活动中受到刑事处罚；（2）重大并购或重组，影响正常生产经营；（3）其他重大风险事项，影响正常采购合作。</li>
+                                <li>8.本项目不接受联合体报名申请。</li>
+                                <li>9.项目特定要求：具备丰富的行业服务经验，拥有一个及以上医疗设备供应实施案例（提供合同）。</li>
+                            </ul>
+                            
+                            <h4 class="detail-title">四、报名所需材料</h4>
+                            <ul class="detail-list">
+                                <li>1. 提供一个及以上医疗设备供应实施案例（提供合同）。</li>
+                                <li>2.《集中采购供应商行为规范承诺书》（格式见附件）。（报名时附件上传盖章扫描件）</li>
+                                <li>3.《采购参与意向反馈函》（格式见附件）。（报名时附件上传盖章扫描件）（反馈的联系人必须要是龙集采系统联系人且实名认证）</li>
+                                <li>4.《报名供应商信息表》（格式见附件）（报名时附件上传 EXCEL 文件）</li>
+                                <li>5.供应商当前未被"信用中国"网站列入税收违法黑名单；未被"中国执行信息公开网"列入失信被执行人名单；未被"中国政府采购网"列入政府采购严重违法失信行为记录名单；未被"国家企业信用信息公示系统"网站列入严重违法失信名单，提供相应网站查询结果截图等。（报名时附件上传截图）</li>
+                            </ul>
+                            
+                            <h4 class="detail-title">五、报名步骤</h4>
+                            <p>报名供应商均需在我行网站 ibuy.ccb.com（不需要登录，如已登录可能看不到供应商征集栏，请退出登录），点击页面上方的"供应商征集"，进入页面后，搜索项目关键词，找到该征集公告，并点击公告最下方蓝色按钮（征集报名），点击登录后，填写相关信息并上传附件后提交，页面显示报名成功即可。</p>
+                            
+                            <h4 class="detail-title">六、联系方式</h4>
+                            <div class="contact-info">
+                                <p><strong>1.需求描述不清晰，与市场情况不符等需求类问题</strong></p>
+                                <p>需求部门联系人：郑老师</p>
+                                <p>联系电话：（023）63771334</p>
+                                <p><strong>2. 供应商资质、报名材料问题</strong></p>
+                                <p>采购部门联系人：余老师、刘老师</p>
+                                <p>联系电话：（023）63771695 63771466</p>
+                                <p>电子邮件：yuwei.cq@ccb.com、liuxin2.cq@ccb.com</p>
+                                <p><strong>3.系统操作问题、企业注册审批、操作故障类问题</strong></p>
+                                <p>联系电话：400-918-1908</p>
                             </div>
                         </div>
                     </div>
